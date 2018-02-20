@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
+require "rake"
 require "log_analyzer"
-require "pry"
 require "terminal-table"
 require "colorize"
 require "optparse"
