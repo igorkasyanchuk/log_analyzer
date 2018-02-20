@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "log_analyzer"
+require "pry"
+require "terminal-table"
+require "colorize"
+require "optparse"
+
+options = {}
+
+parser = OptionParser.new do |opts|
+  opts.banner = "Usage: log_analyzer [options]\nSample: log_analyzer -f production.log -s name"
+
+  opts.on("-f filename", "--file=filename", "Select log file") do |v|
+    options[:file] = v
+  end
+
+  opts.on("-s order", "--sort=order", "Select sorting: time/name/count. Default: time") do |v|
+    options[:sort] = v
+  end
+
+  opts.on('-h', '--help', 'Displays Help') do
+    puts opts
+    exit
+  end
+end
+
+parser.parse!
+
+options[:sort] ||= :time # default order
+
+if options[:file] && options[:sort]
+  analyzer = LogAnalyzer.analyze(filename: options[:file])
+  analyzer.run
+  analyzer.order(by: options[:sort])
+  analyzer.visualize
+else
+  parser.parse! %w[--help]
+end
