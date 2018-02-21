@@ -2,7 +2,7 @@ require "spec_helper"
 
 RSpec.describe LogAnalyzer::Stat do
   it "calculates" do
-    stat = LogAnalyzer::Stat.new
+    stat = LogAnalyzer::Stat.new(type: 'P')
     stat.push 10
     stat.push 20
     stat.push 30

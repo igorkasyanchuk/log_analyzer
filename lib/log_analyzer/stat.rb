@@ -1,9 +1,10 @@
 module LogAnalyzer
   class Stat
-    attr_reader :data
+    attr_reader :data, :type
 
-    def initialize
+    def initialize(type:)
       @data = []
+      @type = type
     end
 
     def push(time)

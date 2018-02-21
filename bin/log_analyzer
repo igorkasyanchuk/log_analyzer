@@ -19,6 +19,10 @@ parser = OptionParser.new do |opts|
     options[:sort] = v
   end
 
+  opts.on("-f filter", "--filter=all", "Select filter: all/partial/view. Default: all") do |v|
+    options[:filter] = v
+  end
+
   opts.on('-h', '--help', 'Displays Help') do
     puts opts
     exit
@@ -27,8 +31,15 @@ end
 
 parser.parse!
 
-options[:file] = ARGV[0] if ARGV.size == 1
-options[:sort] ||= :time # default order
+options[:file]     = ARGV[0] if ARGV.size == 1 # user first argument as filename
+options[:sort]   ||= :time # default order
+options[:filter] ||= :all  # default order
+
+LogAnalyzer::Configuration.configure do |config|
+  config.filter = options[:filter]
+end
+
+# puts "Running with: #{options.inspect}" # debug
 
 if options[:file] && options[:sort]
   analyzer = LogAnalyzer.analyze(filename: options[:file])

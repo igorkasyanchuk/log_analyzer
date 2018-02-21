@@ -1,5 +1,15 @@
-sudo: false
 language: ruby
+
 rvm:
-  - 2.2.2
-before_install: gem install bundler -v 1.14.6
+  - "2.2"
+  - "2.3"
+  - "2.4"
+  - "2.5"
+
+before_install: "gem install bundler && gem install rspec"
+
+cache: bundler
+
+script: bundle exec rspec
+
+bundler_args: --without development --jobs=3 --retry=3 --path=../vendor/bundle

@@ -8,12 +8,12 @@ See how fast is rendering in your Ruby on Rails app. Based on information from l
 
 You can see columns:
 
+* Type - type of file (partial or view = P or V)
 * View - name of view
 * Count - number of renders
 * Avg - average time of rendering (in milliseconds)
 * Max - maximum time of rendering
 * Min - minimum time of rendering
-
 
 ## Installation
 
@@ -41,8 +41,12 @@ Samples:
 * `log_analyzer log/development.log -s count`
 * `log_analyzer log/production.log`
 * `log_analyzer -f log/production.log -s name`
-* `log_analyzer -f log/production.log -s time`
+* `log_analyzer -f log/production.log -s time -f v`
 * `log_analyzer -file log/production.log -sort count`
+* `log_analyzer -file log/production.log -sort count -filter view`
+* `log_analyzer -file log/production.log -sort count -filter partial`
+* `log_analyzer -file log/production.log -sort time -filter P`
+* `log_analyzer --help`
 
 **Based on results you can get an idea what to optimize. For example optimizing most often rendering view could give huge benefit. Now with this tool you can find out what are the numbers.**
 

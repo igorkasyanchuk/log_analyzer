@@ -18,4 +18,16 @@ RSpec.describe LogAnalyzer::Analyzer do
     analyzer.run
     expect { analyzer.visualize }.not_to raise_error
   end
+
+  ['ALL', 'Partials', 'Views'].each do |filter|
+    it "visualizes according to filter=#{filter}" do
+      LogAnalyzer::Configuration.reset
+      LogAnalyzer::Configuration.configure do |config|
+        config.filter = filter
+      end
+      analyzer.run
+      expect { analyzer.visualize }.not_to raise_error
+    end
+  end
+
 end

@@ -6,7 +6,9 @@ module LogAnalyzer
     DANGER_DEFAULT      = 800 # ms
     WARNING_DEFAULT     = 400 # ms
     INFO_DEFAULT        = 100 # ms
-    HEADER              = ['View', 'Count', 'AVG (ms)', 'Max', 'Min'].freeze
+    HEADER              = ['Type', 'View', 'Count', 'AVG (ms)', 'Max', 'Min'].freeze
+    PARTIAL_LABEL       = " P ".on_green.black.freeze
+    VIEW_LABEL          = " V ".on_yellow.black.freeze
 
     attr_reader :filename
     attr_reader :stats
@@ -20,11 +22,16 @@ module LogAnalyzer
       IO.foreach(filename).each do |line|
         if line =~ MATCHER
           if $1 && $2
-            @stats[$1] ||= Stat.new
-            @stats[$1].push($2)
+            view = $1
+            @stats[view] ||= Stat.new(type: find_type(view))
+            @stats[view].push($2)
           end
         end
       end
+    end
+
+    def find_type(view)
+      view.split('/'.freeze).last[0] == '_' ? 'P'.freeze : 'V'.freeze
     end
 
     def order(by: :time)
@@ -39,12 +46,15 @@ module LogAnalyzer
     end
 
     def visualize(limit: 100)
-      length = (0..DEFAULT_TABLE_WIDTH - 20).freeze
-      table  = Terminal::Table.new \
+      length  = (0..DEFAULT_TABLE_WIDTH - 20).freeze
+      filters = LogAnalyzer::Configuration.configuration.filters
+      table   = Terminal::Table.new \
         headings: HEADER,
         width: DEFAULT_TABLE_WIDTH do |t|
           stats.each do |path, stat|
+            next unless filters.include?(stat.type)
             t.add_row [
+              type_label(stat.type),
               path[length],
               stat.count,
               avg_label(stat.avg),
@@ -58,17 +68,24 @@ module LogAnalyzer
       puts table
     end
 
-    def avg_label(avg)
-      str = avg.to_s
-      if avg > DANGER_DEFAULT
-        str.white.on_red
-      elsif avg > WARNING_DEFAULT
-        str.red
-      elsif avg > INFO_DEFAULT
-        str.yellow
-      else
-        str.green
+    private
+
+      def type_label(type)
+        type == LogAnalyzer::Configuration::PARTIALS ? PARTIAL_LABEL : VIEW_LABEL
       end
-    end
+
+      def avg_label(avg)
+        str = avg.to_s
+        if avg > DANGER_DEFAULT
+          str.white.on_red
+        elsif avg > WARNING_DEFAULT
+          str.red
+        elsif avg > INFO_DEFAULT
+          str.yellow
+        else
+          str.green
+        end
+      end
+
   end
 end
