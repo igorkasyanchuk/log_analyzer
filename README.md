@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/igorkasyanchuk/log_analyzer.svg?branch=master)](https://travis-ci.org/igorkasyanchuk/log_analyzer)
+
 # LogAnalyzer
 
 See how fast is rendering in your Ruby on Rails app. Based on information from logs. Provides you a picture of how often renders and how fast renders your views.
