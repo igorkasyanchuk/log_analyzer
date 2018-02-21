@@ -4,7 +4,7 @@ See how fast is rendering in your Ruby on Rails app. Based on information from l
 
 ## Sample
 
-[![Sample](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/log_analyzer.png)](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/log_analyzer.png)
+[![Sample](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/screenshot.png)](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/screenshot.png)
 
 You can see columns:
 
