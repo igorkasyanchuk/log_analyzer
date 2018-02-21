@@ -17,6 +17,8 @@ You can see columns:
 
 ## Installation
 
+Could be installed as standalone (without adding to Gemfile).
+
 Add this line to your application's Gemfile:
 
 ```ruby
