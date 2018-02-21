@@ -4,7 +4,7 @@ See how fast is rendering in your app. Based on information from logs.
 
 ## Sample
 
-[![Sample](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/log_analyzer-cut.png)](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/log_analyzer-cut.png)
+[![Sample](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/log_analyzer_small.png)](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/log_analyzer_small.png)
 
 You can see columns:
 
