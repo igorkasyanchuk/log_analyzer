@@ -34,8 +34,14 @@ Or install it yourself as:
 ## Usage
 
 After instalation run in console command `log_analyzer -f log/development.log`. You can change the file or sorting (time, count, name).
+Samples:
 
-*Based on results you can get an idea what to optimize. For example optimizing most often rendering view could give huge benefit. Now with this tool you can find out what are the numbers.*
+* `log_analyzer log/production.log`
+* `log_analyzer -f log/production.log -s name`
+* `log_analyzer -f log/production.log -s time`
+* `log_analyzer -file log/production.log -sort count`
+
+**Based on results you can get an idea what to optimize. For example optimizing most often rendering view could give huge benefit. Now with this tool you can find out what are the numbers.**
 
 ## Development
 
