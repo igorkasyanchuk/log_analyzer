@@ -1,15 +1,16 @@
 module LogAnalyzer
   class Stat
-    attr_reader :count
     attr_reader :data
 
     def initialize
       @data  = []
-      @count = 0
+    end
+    
+    def count
+      @data.count
     end
 
     def push(time)
-      @count += 1
       @data << time.to_f
     end
 
