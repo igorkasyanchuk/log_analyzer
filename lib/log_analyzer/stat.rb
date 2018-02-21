@@ -3,11 +3,7 @@ module LogAnalyzer
     attr_reader :data
 
     def initialize
-      @data  = []
-    end
-    
-    def count
-      @data.count
+      @data = []
     end
 
     def push(time)
@@ -18,12 +14,11 @@ module LogAnalyzer
       @avg ||= (sum.to_f / count.to_f).round(2)
     end
 
+    def count; @count ||= @data.count; end
     def max; @max ||= @data.max; end
     def min; @min ||= @data.min; end
 
     private
-    def sum
-      @sum ||= @data.reduce(:+)
-    end
+      def sum; @sum ||= @data.reduce(:+); end
   end
 end

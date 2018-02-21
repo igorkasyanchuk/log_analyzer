@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    log_analyzer (0.1.5)
+    log_analyzer (0.1.6)
       colorize
       rake
       terminal-table
