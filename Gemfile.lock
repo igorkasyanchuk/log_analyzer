@@ -50,7 +50,7 @@ DEPENDENCIES
   bundler (> 1.14)
   log_analyzer!
   pry
-  rspec (~> 3.0)
+  rspec
   simplecov
 
 BUNDLED WITH
