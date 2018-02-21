@@ -1,6 +1,6 @@
 # LogAnalyzer
 
-See how fast is rendering in your app. Based on information from logs.
+See how fast is rendering in your Ruby on Rails app. Based on information from logs.
 
 ## Sample
 
@@ -36,6 +36,7 @@ Or install it yourself as:
 After instalation run in console command `log_analyzer -f log/development.log`. You can change the file or sorting (time, count, name).
 Samples:
 
+* `log_analyzer log/development.log -s count`
 * `log_analyzer log/production.log`
 * `log_analyzer -f log/production.log -s name`
 * `log_analyzer -f log/production.log -s time`
