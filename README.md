@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/igorkasyanchuk/log_analyzer.svg?branch=master)](https://travis-ci.org/igorkasyanchuk/log_analyzer)
+
 # LogAnalyzer
 
 See how fast is rendering in your Ruby on Rails app. Based on information from logs. Provides you a picture of how often renders and how fast renders your views.
@@ -66,6 +68,10 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/varyfo
 
 * more analytics
 * more specs
+* export to PDF
+* export to CSV
+* export to XLS
+* export to HTML/CSS/JS with datatable.js
 
 ## License
 
