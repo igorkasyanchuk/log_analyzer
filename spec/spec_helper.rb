@@ -1,4 +1,9 @@
 require "bundler/setup"
+
+require 'simplecov'
+
+SimpleCov.start
+
 require "log_analyzer"
 
 RSpec.configure do |config|

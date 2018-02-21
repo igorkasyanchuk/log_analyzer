@@ -1,0 +1,21 @@
+require "spec_helper"
+
+RSpec.describe LogAnalyzer::Analyzer do
+  let!(:analyzer) { LogAnalyzer::Analyzer.new(filename: 'spec/fixtures/file.log') }
+
+  it "runs" do
+    expect { analyzer.run }.not_to raise_error
+  end
+
+  it "sorts" do
+    analyzer.run
+    expect { analyzer.order(by: :time) }.not_to raise_error
+    expect { analyzer.order(by: :name) }.not_to raise_error
+    expect { analyzer.order(by: :count) }.not_to raise_error
+  end
+
+  it "visualizes" do
+    analyzer.run
+    expect { analyzer.visualize }.not_to raise_error
+  end
+end

@@ -61,7 +61,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/varyfo
 ## TODO
 
 * more analytics
-* specs
+* more specs
 
 ## License
 
