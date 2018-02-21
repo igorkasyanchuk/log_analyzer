@@ -1,7 +1,7 @@
 require "spec_helper"
 
 RSpec.describe LogAnalyzer::Analyzer do
-  let!(:analyzer) { LogAnalyzer::Analyzer.new(filename: 'spec/fixtures/file.log') }
+  let!(:analyzer) { LogAnalyzer::Analyzer.new(filename: TEST_FILE) }
 
   it "runs" do
     expect { analyzer.run }.not_to raise_error

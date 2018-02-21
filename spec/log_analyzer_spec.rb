@@ -6,6 +6,6 @@ RSpec.describe LogAnalyzer do
   end
 
   it 'has working shortcut' do
-    expect { LogAnalyzer.analyze(filename: 'spec/fixtures/file.log').run }.not_to raise_error
+    expect { LogAnalyzer.analyze(filename: TEST_FILE).run }.not_to raise_error
   end
 end

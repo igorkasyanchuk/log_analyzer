@@ -4,6 +4,9 @@ require 'simplecov'
 
 SimpleCov.start
 
+RSPEC_ROOT = File.dirname(__FILE__)
+TEST_FILE  = "#{RSPEC_ROOT}/fixtures/file.log"
+
 require "log_analyzer"
 
 RSpec.configure do |config|
@@ -14,3 +17,4 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
