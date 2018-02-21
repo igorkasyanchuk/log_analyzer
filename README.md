@@ -68,6 +68,10 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/varyfo
 
 * more analytics
 * more specs
+* export to PDF
+* export to CSV
+* export to XLS
+* export to HTML/CSS/JS with datatable.js
 
 ## License
 
