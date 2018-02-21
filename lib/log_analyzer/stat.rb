@@ -22,7 +22,7 @@ module LogAnalyzer
 
     private
     def sum
-      @sum ||= @data.inject(nil) { |total, x| total ? total + x : x }
+      @sum ||= @data.reduce(:+)
     end
   end
 end
