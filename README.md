@@ -10,7 +10,7 @@ You can see columns:
 
 * View - name of view
 * Count - number of renders
-* Avg - average time of rendering
+* Avg - average time of rendering (in milliseconds)
 * Max - maximum number of rendering
 * Min - minimum number of rendering
 
