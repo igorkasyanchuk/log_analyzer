@@ -1,6 +1,19 @@
 # LogAnalyzer
 
-See how fast is rendering in your app. Based on information from logs
+See how fast is rendering in your app. Based on information from logs.
+
+## Sample
+
+[![Sample](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/log_analyzer-cut.png)](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/log_analyzer-cut.png)
+
+You can see columns:
+
+* View - name of view
+* Count - number of renders
+* Avg - average time of rendering
+* Max - maximum number of rendering
+* Min - minimum number of rendering
+
 
 ## Installation
 
@@ -20,7 +33,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After instalation run in console command `log_analyzer -f log/development.log`. You can change the file or sorting (time, count, name).
+
+*Based on results you can get an idea what to optimize. For example optimizing most often rendering view could give huge benefit. Now with this tool you can find out what are the numbers.*
 
 ## Development
 

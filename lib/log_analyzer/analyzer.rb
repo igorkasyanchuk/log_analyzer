@@ -2,10 +2,11 @@ module LogAnalyzer
 
   class Analyzer
     DEFAULT_TABLE_WIDTH = 120 # width
-    MATCHER             = /Rendered (.*) \((.*)ms\)/.freeze
+    MATCHER             = /Rendered (.*\/.*) \((.*)ms\)/.freeze
     DANGER_DEFAULT      = 800 # ms
     WARNING_DEFAULT     = 400 # ms
     INFO_DEFAULT        = 100 # ms
+    HEADER              = ['View', 'Count', 'AVG (ms)', 'Max', 'Min'].freeze
 
     attr_reader :filename
     attr_reader :stats
@@ -40,17 +41,19 @@ module LogAnalyzer
     def visualize(limit: 100)
       length = (0..DEFAULT_TABLE_WIDTH - 20).freeze
       table  = Terminal::Table.new \
-        headings: ['Path', 'Count', 'AVG (ms)', 'Max', 'Min'],
+        headings: HEADER,
         width: DEFAULT_TABLE_WIDTH do |t|
-        stats.each do |path, stat|
-          t.add_row [
-            path[length],
-            stat.count,
-            avg_label(stat.avg),
-            stat.max,
-            stat.min,
-          ]
-        end
+          stats.each do |path, stat|
+            t.add_row [
+              path[length],
+              stat.count,
+              avg_label(stat.avg),
+              stat.max,
+              stat.min,
+            ]
+          end
+          t.add_separator
+          t.add_row(HEADER)
       end
       puts table
     end

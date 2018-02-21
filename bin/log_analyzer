@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
 require "rake"
 require "log_analyzer"
 require "terminal-table"
@@ -28,6 +27,7 @@ end
 
 parser.parse!
 
+options[:file] = ARGV[0] if ARGV.size == 1
 options[:sort] ||= :time # default order
 
 if options[:file] && options[:sort]
