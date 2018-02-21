@@ -1,6 +1,6 @@
 # LogAnalyzer
 
-See how fast is rendering in your Ruby on Rails app. Based on information from logs.
+See how fast is rendering in your Ruby on Rails app. Based on information from logs. Provides you a picture of how often renders and how fast renders your views.
 
 ## Sample
 
@@ -44,6 +44,8 @@ Samples:
 
 **Based on results you can get an idea what to optimize. For example optimizing most often rendering view could give huge benefit. Now with this tool you can find out what are the numbers.**
 
+Based on the observations I suggest to run this tool for files less than 1Gb. If you have enough RAM - download log file to local machine and then run the tool.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -54,6 +56,10 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/varyform/log_analyzer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
+## TODO
+
+* more analytics
+* specs
 
 ## License
 
