@@ -38,5 +38,4 @@ module LogAnalyzer
     end
 
   end
-
 end

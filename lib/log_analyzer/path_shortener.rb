@@ -5,7 +5,7 @@ module LogAnalyzer
 
     def initialize(path, max: MAX_LENGTH)
       @path = path
-      @max = max
+      @max  = max
     end
 
     def self.shrink(path, max: MAX_LENGTH)

@@ -38,7 +38,7 @@ RSpec.describe LogAnalyzer::Analyzer do
 
   it "visualizes and shortens the long paths" do
     analyzer.run
-    expect { analyzer.visualize(short_paths: true) }.not_to raise_error
+    expect { analyzer.visualize(short: true) }.not_to raise_error
   end
 
 end

@@ -48,7 +48,8 @@ Samples:
 * `log_analyzer -file log/production.log -sort count -filter view`
 * `log_analyzer -file log/production.log -sort count -filter partial`
 * `log_analyzer -file log/production.log -sort time -filter P`
-* `log_analyzer -file log/production.log --short-paths`
+* `log_analyzer log/production.log -sp`
+* `log_analyzer -file log/production.log --short`
 * `log_analyzer --help`
 
 **Based on results you can get an idea what to optimize. For example optimizing most often rendering view could give huge benefit. Now with this tool you can find out what are the numbers.**
@@ -64,6 +65,13 @@ To install this gem on your local machine, run `bundle exec rake install`. To re
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/igorkasyanchuk/log_analyzer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## Contributors
+
+Big thank you to all contributors:
+
+* @ck3g
+* @ritaritual
 
 ## TODO
 

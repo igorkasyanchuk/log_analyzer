@@ -23,8 +23,8 @@ parser = OptionParser.new do |opts|
     options[:filter] = v
   end
 
-  opts.on("-sp", "--short-paths", "Shrink long paths") do |v|
-    options[:short_paths] = v
+  opts.on("-sp", "--short", "Shrink long paths") do |v|
+    options[:short] = v
   end
 
   opts.on('-h', '--help', 'Displays Help') do
@@ -35,10 +35,10 @@ end
 
 parser.parse!
 
-options[:file]        = ARGV[0] if ARGV.size == 1 # user first argument as filename
-options[:sort]        ||= :time # default order
-options[:filter]      ||= :all  # default order
-options[:short_paths] ||= false
+options[:file]      = ARGV[0] if ARGV.size == 1 # user first argument as filename
+options[:sort]    ||= :time # default order
+options[:filter]  ||= :all  # default order
+options[:short]   ||= false
 
 LogAnalyzer::Configuration.configure do |config|
   config.filter = options[:filter]
@@ -50,7 +50,7 @@ if options[:file] && options[:sort]
   analyzer = LogAnalyzer.analyze(filename: options[:file])
   analyzer.run
   analyzer.order(by: options[:sort])
-  analyzer.visualize(short_paths: options[:short_paths])
+  analyzer.visualize(short: options[:short])
 else
   parser.parse! %w[--help]
 end

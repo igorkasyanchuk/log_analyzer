@@ -8,4 +8,8 @@ RSpec.describe LogAnalyzer do
   it 'has working shortcut' do
     expect { LogAnalyzer.analyze(filename: TEST_FILE).run }.not_to raise_error
   end
+
+  it 'handle ok when file not found' do
+    expect { LogAnalyzer.analyze(filename: 'xyz').run }.to raise_error(SystemExit)
+  end
 end
