@@ -17,7 +17,7 @@ module LogAnalyzer
 
     def run
       IO.foreach(filename).each do |line|
-        if line =~ MATCHER
+        if line.scrub =~ MATCHER
           if $1 && $2
             view = $1
             @stats[view] ||= Stat.new(type: Utils.find_type(view))

@@ -31,3 +31,4 @@ Completed 200 OK in 1000ms (Views: 577.3ms | ActiveRecord: 339.8ms)
   Rendered inline template within layouts/application (56.1ms)
   Rendered shared/_onesignal.html.erb (0.1ms)
   Rendered shared/_fb_recommend.html.erb (0.0ms)
+invalid byte sequence ‹'
