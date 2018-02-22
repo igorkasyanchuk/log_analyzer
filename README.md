@@ -62,7 +62,7 @@ To install this gem on your local machine, run `bundle exec rake install`. To re
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/varyform/log_analyzer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/igorkasyanchuk/log_analyzer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## TODO
 
