@@ -71,8 +71,8 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/igorka
 
 Big thank you to all contributors:
 
-* @ck3g
-* @ritaritual
+* [@ck3g](https://github.com/ck3g)
+* [@ritaritual](https://github.com/ritaritual)
 
 ## TODO
 
