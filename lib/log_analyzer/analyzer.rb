@@ -2,13 +2,13 @@ module LogAnalyzer
 
   class Analyzer
     DEFAULT_TABLE_WIDTH = 120 # width
-    MATCHER             = /Rendered (.*\/.*) \((.*)ms\)/.freeze
     DANGER_DEFAULT      = 800 # ms
     WARNING_DEFAULT     = 400 # ms
     INFO_DEFAULT        = 100 # ms
     HEADER              = ['Type', 'View', 'Count', 'AVG (ms)', 'Max', 'Min'].freeze
     PARTIAL_LABEL       = " P ".on_green.black.freeze
     VIEW_LABEL          = " V ".on_yellow.black.freeze
+    MATCHER             = /Rendered (.*\/.*) \((.*)ms\)/.freeze
 
     attr_reader :filename
     attr_reader :stats
@@ -28,10 +28,9 @@ module LogAnalyzer
           end
         end
       end
-    end
-
-    def find_type(view)
-      view.split('/'.freeze).last[0] == '_' ? 'P'.freeze : 'V'.freeze
+    rescue Errno::ENOENT
+      puts "File <#{filename}> not found or not accessible.".red
+      exit
     end
 
     def order(by: :time)
@@ -69,6 +68,10 @@ module LogAnalyzer
     end
 
     private
+
+      def find_type(view)
+        view.split('/'.freeze).last[0] == '_'.freeze ? 'P'.freeze : 'V'.freeze
+      end
 
       def type_label(type)
         type == LogAnalyzer::Configuration::PARTIALS ? PARTIAL_LABEL : VIEW_LABEL

@@ -1,6 +1,12 @@
 require "spec_helper"
 
 RSpec.describe LogAnalyzer::Analyzer do
+  before do
+    LogAnalyzer::Configuration.configure do |config|
+      config.filter = "all"
+    end
+  end
+
   let!(:analyzer) { LogAnalyzer::Analyzer.new(filename: TEST_FILE) }
 
   it "runs" do
@@ -9,8 +15,8 @@ RSpec.describe LogAnalyzer::Analyzer do
 
   it "sorts" do
     analyzer.run
-    expect { analyzer.order(by: :time) }.not_to raise_error
-    expect { analyzer.order(by: :name) }.not_to raise_error
+    expect { analyzer.order(by: :time)  }.not_to raise_error
+    expect { analyzer.order(by: :name)  }.not_to raise_error
     expect { analyzer.order(by: :count) }.not_to raise_error
   end
 

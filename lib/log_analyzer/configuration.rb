@@ -4,19 +4,25 @@ module LogAnalyzer
     ALL      = 'A'.freeze # ALL
     PARTIALS = 'P'.freeze # Partials
     VIEWS    = 'V'.freeze # Views
+    FILTERS  = Hash.new([PARTIALS, VIEWS]).merge({
+      PARTIALS => [PARTIALS],
+      VIEWS    => [VIEWS]
+    }).freeze # with default value ALL
 
     class << self
       attr_accessor :configuration
     end
 
     attr_accessor :filter
+    attr_reader   :filters
 
     def initialize
       @filter = ALL
     end
 
     def filter=(other)
-      @filter = other.upcase[0]
+      @filter    = other.upcase[0]
+      @filters ||= FILTERS[filter]
     end
 
     def self.configuration
@@ -29,17 +35,6 @@ module LogAnalyzer
 
     def self.configure
       yield(configuration)
-    end
-
-    def filters
-      @filters ||= case filter
-      when VIEWS
-        [VIEWS]
-      when PARTIALS
-        [PARTIALS]
-      else
-        [PARTIALS, VIEWS]
-      end
     end
 
   end
