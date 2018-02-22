@@ -33,6 +33,11 @@ parser = OptionParser.new do |opts|
   end
 end
 
+# hack, because "log_analyzer production.log --short" not works but "-sp" works
+if i = ARGV.index("--short")
+  ARGV[i] = "-sp"
+end
+
 parser.parse!
 
 options[:file]      = ARGV[0] if ARGV.size == 1 # user first argument as filename

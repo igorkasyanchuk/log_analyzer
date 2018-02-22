@@ -48,6 +48,7 @@ Samples:
 * `log_analyzer -file log/production.log -sort count -filter view`
 * `log_analyzer -file log/production.log -sort count -filter partial`
 * `log_analyzer -file log/production.log -sort time -filter P`
+* `log_analyzer log/production.log --short`
 * `log_analyzer log/production.log -sp`
 * `log_analyzer -file log/production.log --short`
 * `log_analyzer --help`
