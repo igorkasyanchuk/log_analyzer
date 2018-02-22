@@ -15,6 +15,7 @@ Read fragment views/user-public-venue-info-544-1517258097/uk/6b62fa87d5f3ab11895
   Rendered favorites/_user.html.slim (14.1ms)
   Rendered profile/show.html.slim within layouts/normal (818.8ms)
   Rendered layouts/_title_and_actions.html.slim (0.1ms)
+  Rendered /here/goes/.some/.very/long/path/to/the/some/view/which/also/comes/from/the/gem/gemname/version-0.0.0/app/layouts/_some_partial.html.slim (0.1ms)
   Rendering inline template within layouts/application
   Rendered inline template within layouts/application (4.0ms)
   Rendered shared/_onesignal.html.erb (0.1ms)

@@ -48,6 +48,7 @@ Samples:
 * `log_analyzer -file log/production.log -sort count -filter view`
 * `log_analyzer -file log/production.log -sort count -filter partial`
 * `log_analyzer -file log/production.log -sort time -filter P`
+* `log_analyzer -file log/production.log --short-paths`
 * `log_analyzer --help`
 
 **Based on results you can get an idea what to optimize. For example optimizing most often rendering view could give huge benefit. Now with this tool you can find out what are the numbers.**

@@ -45,7 +45,7 @@ module LogAnalyzer
       end
     end
 
-    def visualize(limit: 100)
+    def visualize(limit: 100, short_paths: false)
       length  = (0..DEFAULT_TABLE_WIDTH - 20).freeze
       filters = LogAnalyzer::Configuration.configuration.filters
       table   = Terminal::Table.new \
@@ -53,9 +53,10 @@ module LogAnalyzer
         width: DEFAULT_TABLE_WIDTH do |t|
           stats.each do |path, stat|
             next unless filters.include?(stat.type)
+            path_to_display = short_paths ? PathShortener.shrink(path, max: length.last) : path[length]
             t.add_row [
               type_label(stat.type),
-              path[length],
+              path_to_display,
               stat.count,
               avg_label(stat.avg),
               stat.max,
