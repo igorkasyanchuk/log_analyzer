@@ -64,14 +64,12 @@ module LogAnalyzer
     end
 
     def to_csv 
-
       CSV.open('/home/hashimoto/generated_file.csv', 'a+') do |csv|
         #CSV header
         csv << %w{Type View Count AVG(ms) Max Min}
         
         #CSV content
         stats.each do |path, stat|
-          binding.pry
           csv << format_row(path, stat, false)
         end
       end

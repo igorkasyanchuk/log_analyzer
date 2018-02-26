@@ -64,7 +64,6 @@ if options[:file] && options[:sort]
 elsif options[:csv]
   analyzer = LogAnalyzer.analyze(filename: "/home/hashimoto/my_project/log_analyzer/spec/files/file.log")
   analyzer.run
-  binding.pry
   analyzer.to_csv
 else
   parser.parse! %w[--help]
