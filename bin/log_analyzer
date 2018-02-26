@@ -5,6 +5,7 @@ require "log_analyzer"
 require "terminal-table"
 require "colorize"
 require "optparse"
+require 'pry'
 
 options = {}
 
@@ -25,6 +26,10 @@ parser = OptionParser.new do |opts|
 
   opts.on("-sp", "--short", "Shrink long paths") do |v|
     options[:short] = v
+  end
+
+  opts.on('-csv', '--output=csv', 'Export to .csv') do |v|
+    options[:csv] = v
   end
 
   opts.on('-h', '--help', 'Displays Help') do
@@ -56,6 +61,12 @@ if options[:file] && options[:sort]
   analyzer.run
   analyzer.order(by: options[:sort])
   analyzer.visualize(short: options[:short])
+elsif options[:csv]
+  analyzer = LogAnalyzer.analyze(filename: "/home/hashimoto/my_project/log_analyzer/spec/files/file.log")
+  analyzer.run
+  binding.pry
+  analyzer.to_csv
 else
   parser.parse! %w[--help]
 end
+
