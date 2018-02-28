@@ -1,5 +1,7 @@
 require "terminal-table"
 require "colorize"
+require "prawn"
+require "prawn/table"
 require "log_analyzer/version"
 require "log_analyzer/configuration"
 require "log_analyzer/utils"

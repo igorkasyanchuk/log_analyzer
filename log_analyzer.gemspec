@@ -26,6 +26,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rake"
   spec.add_dependency "terminal-table"
   spec.add_dependency "colorize"
+  spec.add_dependency "prawn"
+  spec.add_dependency "prawn-table"
 
   spec.add_development_dependency "bundler", "> 1.14"
   spec.add_development_dependency "rspec", "~> 3.0"
