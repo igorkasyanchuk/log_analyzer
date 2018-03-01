@@ -41,4 +41,10 @@ RSpec.describe LogAnalyzer::Analyzer do
     expect { analyzer.visualize(short: true) }.not_to raise_error
   end
 
+  it "export log to csv" do
+    analyzer.run
+    expect { analyzer.to_csv }.not_to raise_error
+    expect(File.exist?("#{Dir.pwd}/report.csv")).to be true
+  end
+
 end
