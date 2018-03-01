@@ -64,13 +64,12 @@ module LogAnalyzer
     end
 
     def to_csv 
-      CSV.open('/home/hashimoto/generated_file.csv', 'a+') do |csv|
+      CSV.open("#{Dir.pwd}/report.csv", 'w') do |csv|
         #CSV header
         csv << %w{Type View Count AVG(ms) Max Min}
-        
         #CSV content
         stats.each do |path, stat|
-          csv << format_row(path, stat, false)
+          csv << csv_format_row(path, stat)
         end
       end
     end
@@ -86,6 +85,17 @@ module LogAnalyzer
         stat.max,
         stat.min,
       ]
+    end
+
+    def csv_format_row(path, stat)
+      [
+        stat.type,
+        path,
+        stat.count,
+        stat.avg,
+        stat.max,
+        stat.min,
+      ]    
     end
 
     def new_table
