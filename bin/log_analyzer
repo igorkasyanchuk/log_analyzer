@@ -48,6 +48,7 @@ end
 
 parser.parse!
 
+# Define default params
 options[:file]      = ARGV[0] if ARGV.size == 1 # user first argument as filename
 options[:sort]    ||= :time # default order
 options[:filter]  ||= :all  # default order
@@ -58,7 +59,7 @@ LogAnalyzer::Configuration.configure do |config|
   config.filter = options[:filter]
 end
 
-puts "Running with: #{options.inspect}".green # debug
+# puts "Running with: #{options.inspect}".green # debug
 
 if options[:file] && options[:sort]
   analyzer = LogAnalyzer.analyze(filename: options[:file])
@@ -66,9 +67,9 @@ if options[:file] && options[:sort]
   analyzer.order(by: options[:sort])
   case options[:format]
   when 'pdf'
-    analyzer.to_pdf('report-log-analyzer.pdf', short: options[:short])
+    analyzer.to_pdf(LogAnalyzer::Utils.report_name('pdf'), short: options[:short])
   when 'csv'
-    analyzer.to_csv('report-log-analyzer.csv', short: options[:short])
+    analyzer.to_csv(LogAnalyzer::Utils.report_name('csv'), short: options[:short])
   else
     analyzer.visualize(short: options[:short])
   end

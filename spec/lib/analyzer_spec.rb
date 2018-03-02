@@ -2,10 +2,7 @@ require "spec_helper"
 
 RSpec.describe LogAnalyzer::Analyzer do
   before do
-    [
-      "#{Dir.pwd}/file.pdf",
-      "#{Dir.pwd}/file.csv"
-    ].each do |file_name|
+    ["#{Dir.pwd}/file.pdf", "#{Dir.pwd}/file.csv"].each do |file_name|
       FileUtils.rm(file_name) rescue nil
     end
     LogAnalyzer::Configuration.configure do |config|
