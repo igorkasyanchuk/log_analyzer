@@ -23,7 +23,7 @@ parser = OptionParser.new do |opts|
     options[:filter] = v
   end
 
-  opts.on("-sp", "--short", "Shrink long paths") do |v|
+  opts.on("--short", "Shrink long paths") do |v|
     options[:short] = v
   end
 
@@ -41,11 +41,6 @@ parser = OptionParser.new do |opts|
   end
 end
 
-# hack, because "log_analyzer production.log --short" not works but "-sp" works
-if i = ARGV.index("--short")
-  ARGV[i] = "-sp"
-end
-
 parser.parse!
 
 # Define default params
@@ -59,7 +54,7 @@ LogAnalyzer::Configuration.configure do |config|
   config.filter = options[:filter]
 end
 
-# puts "Running with: #{options.inspect}".green # debug
+#puts "Running with: #{options.inspect}".green # debug
 
 if options[:file] && options[:sort]
   analyzer = LogAnalyzer.analyze(filename: options[:file])

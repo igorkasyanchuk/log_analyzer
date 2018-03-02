@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    log_analyzer (0.3.0)
+    log_analyzer (0.3.1)
       colorize
       prawn
       prawn-table

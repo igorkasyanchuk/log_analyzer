@@ -38,6 +38,7 @@ Or install it yourself as:
 ## Usage
 
 After installation run in console command `log_analyzer -f log/development.log`. You can change the file or sorting (time, count, name).
+
 Samples:
 
 * `log_analyzer log/development.log -s count`
@@ -49,9 +50,9 @@ Samples:
 * `log_analyzer -file log/production.log -sort count`
 * `log_analyzer -file log/production.log -sort count -filter view`
 * `log_analyzer -file log/production.log -sort count -filter partial`
-* `log_analyzer -file log/production.log -sort time -filter P`
-* `log_analyzer log/production.log --short`
-* `log_analyzer log/production.log -sp`
+* `log_analyzer -file log/production.log -sort time -filter p`
+* `log_analyzer development.log -csv -s time -f p`
+* `log_analyzer log/production.log -pdf --short`
 * `log_analyzer -file log/production.log --short`
 * `log_analyzer --help`
 
