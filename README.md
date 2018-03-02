@@ -8,6 +8,8 @@ See how fast is rendering in your Ruby on Rails app. Based on information from l
 
 [![Sample](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/screenshot.png)](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/screenshot.png)
 
+[![Reports](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/reports.png)](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/reports.png)
+
 You can see columns:
 
 * Type - type of file (partial or view = P or V)
