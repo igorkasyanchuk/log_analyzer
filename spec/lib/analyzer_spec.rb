@@ -2,6 +2,12 @@ require "spec_helper"
 
 RSpec.describe LogAnalyzer::Analyzer do
   before do
+    [
+      "#{Dir.pwd}/file.pdf",
+      "#{Dir.pwd}/file.csv"
+    ].each do |file_name|
+      FileUtils.rm(file_name) rescue nil
+    end
     LogAnalyzer::Configuration.configure do |config|
       config.filter = "all"
     end
@@ -43,8 +49,14 @@ RSpec.describe LogAnalyzer::Analyzer do
 
   it "export log to csv" do
     analyzer.run
-    expect { analyzer.to_csv }.not_to raise_error
-    expect(File.exist?("#{Dir.pwd}/report.csv")).to be true
+    expect { analyzer.to_csv('file.csv') }.not_to raise_error
+    expect(File.exist?('file.csv')).to be true
+  end
+
+  it "export log to pdf" do
+    analyzer.run
+    expect { analyzer.to_pdf('file.pdf') }.not_to raise_error
+    expect(File.exist?('file.pdf')).to be true
   end
 
 end
