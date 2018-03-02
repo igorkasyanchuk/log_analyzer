@@ -42,6 +42,8 @@ Samples:
 
 * `log_analyzer log/development.log -s count`
 * `log_analyzer log/production.log`
+* `log_analyzer production.log -csv`
+* `log_analyzer production.log -pdf`
 * `log_analyzer -f log/production.log -s name`
 * `log_analyzer -f log/production.log -s time -f v`
 * `log_analyzer -file log/production.log -sort count`
@@ -74,13 +76,12 @@ Big thank you to all our contributors:
 * [@ck3g](https://github.com/ck3g)
 * [@ritaritual](https://github.com/ritaritual)
 * [@y-yagi](https://github.com/y-yagi)
+* [@RafaelHashimoto](https://github.com/RafaelHashimoto)
 
 ## TODO
 
 * more analytics
 * more specs
-* export to PDF
-* export to CSV
 * export to XLS
 * export to HTML/CSS/JS with datatable.js
 

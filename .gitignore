@@ -15,3 +15,7 @@
 /.DS_Store
 
 /doc/.DS_Store
+
+*.pdf
+*.csv
+*.xls

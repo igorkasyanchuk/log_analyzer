@@ -12,4 +12,5 @@ RSpec.describe LogAnalyzer do
   it 'handle ok when file not found' do
     expect { LogAnalyzer.analyze(filename: 'xyz').run }.to raise_error(SystemExit)
   end
+
 end
