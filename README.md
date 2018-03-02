@@ -74,6 +74,7 @@ Big thank you to all our contributors:
 * [@ck3g](https://github.com/ck3g)
 * [@ritaritual](https://github.com/ritaritual)
 * [@y-yagi](https://github.com/y-yagi)
+* [@RafaelHashimoto](https://github.com/RafaelHashimoto)
 
 ## TODO
 
