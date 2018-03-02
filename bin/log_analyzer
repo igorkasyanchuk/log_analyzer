@@ -27,8 +27,12 @@ parser = OptionParser.new do |opts|
     options[:short] = v
   end
 
-  opts.on("-o output", "--out=console", "Output in PDF") do |v|
-    options[:out] = v
+  opts.on("-pdf", "--output=pdf", "Export to .pdf") do |v|
+    options[:format] = 'pdf'
+  end
+
+  opts.on('-csv', '--output=csv', 'Export to .csv') do |v|
+    options[:format] = 'csv'
   end
 
   opts.on('-h', '--help', 'Displays Help') do
@@ -48,7 +52,7 @@ options[:file]      = ARGV[0] if ARGV.size == 1 # user first argument as filenam
 options[:sort]    ||= :time # default order
 options[:filter]  ||= :all  # default order
 options[:short]   ||= false
-options[:out]     ||= 'console'
+options[:format]  ||= 'console'
 
 LogAnalyzer::Configuration.configure do |config|
   config.filter = options[:filter]
@@ -60,14 +64,15 @@ if options[:file] && options[:sort]
   analyzer = LogAnalyzer.analyze(filename: options[:file])
   analyzer.run
   analyzer.order(by: options[:sort])
-
-  case options[:out]
+  case options[:format]
   when 'pdf'
-    analyzer.to_pdf('report-log-analyzer.pdf')
+    analyzer.to_pdf('report-log-analyzer.pdf', short: options[:short])
+  when 'csv'
+    analyzer.to_csv('report-log-analyzer.csv', short: options[:short])
   else
     analyzer.visualize(short: options[:short])
   end
-
 else
   parser.parse! %w[--help]
 end
+
