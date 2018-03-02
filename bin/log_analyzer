@@ -27,6 +27,10 @@ parser = OptionParser.new do |opts|
     options[:short] = v
   end
 
+  opts.on('-csv', '--output=csv', 'Export to .csv') do |v|
+    options[:format] = 'csv'
+  end
+
   opts.on('-h', '--help', 'Displays Help') do
     puts opts
     exit
@@ -55,7 +59,13 @@ if options[:file] && options[:sort]
   analyzer = LogAnalyzer.analyze(filename: options[:file])
   analyzer.run
   analyzer.order(by: options[:sort])
-  analyzer.visualize(short: options[:short])
+  case options[:format].to_s
+  when 'csv'
+    analyzer.to_csv
+  else
+    analyzer.visualize(short: options[:short])
+  end
 else
   parser.parse! %w[--help]
 end
+

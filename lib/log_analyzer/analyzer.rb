@@ -1,5 +1,5 @@
 module LogAnalyzer
-
+  
   class Analyzer
     DEFAULT_TABLE_WIDTH = 120 # width
     CONTENT_LENGTH      = (0..DEFAULT_TABLE_WIDTH - 20).freeze
@@ -63,6 +63,17 @@ module LogAnalyzer
       puts(table)
     end
 
+    def to_csv 
+      CSV.open("#{Dir.pwd}/report.csv", 'w') do |csv|
+        #CSV header
+        csv << %w{Type View Count AVG(ms) Max Min}
+        #CSV content
+        stats.each do |path, stat|
+          csv << csv_format_row(path, stat)
+        end
+      end
+    end
+
     private
 
     def format_row(path, stat, short)
@@ -74,6 +85,17 @@ module LogAnalyzer
         stat.max,
         stat.min,
       ]
+    end
+
+    def csv_format_row(path, stat)
+      [
+        stat.type,
+        path,
+        stat.count,
+        stat.avg,
+        stat.max,
+        stat.min,
+      ]    
     end
 
     def new_table
