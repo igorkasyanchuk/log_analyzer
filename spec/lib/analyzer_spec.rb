@@ -56,4 +56,10 @@ RSpec.describe LogAnalyzer::Analyzer do
     expect(File.exist?('file.pdf')).to be true
   end
 
+  it "export log to xls" do
+    analyzer.run
+    expect { analyzer.to_xls('file.xls') }.not_to raise_error
+    expect(File.exist?('file.xls')).to be true
+  end
+
 end
