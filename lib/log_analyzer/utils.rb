@@ -44,5 +44,9 @@ module LogAnalyzer
       end
     end
 
+    def Utils.report_name(extension)
+      "report-log-analyzer-#{Time.now.strftime('%Y-%m-%d_%H-%M-%S')}.#{extension}"
+    end
+
   end
 end

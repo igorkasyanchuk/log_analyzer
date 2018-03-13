@@ -23,8 +23,12 @@ parser = OptionParser.new do |opts|
     options[:filter] = v
   end
 
-  opts.on("-sp", "--short", "Shrink long paths") do |v|
+  opts.on("--short", "Shrink long paths") do |v|
     options[:short] = v
+  end
+
+  opts.on("-pdf", "--output=pdf", "Export to .pdf") do |v|
+    options[:format] = 'pdf'
   end
 
   opts.on('-csv', '--output=csv', 'Export to .csv') do |v|
@@ -37,31 +41,30 @@ parser = OptionParser.new do |opts|
   end
 end
 
-# hack, because "log_analyzer production.log --short" not works but "-sp" works
-if i = ARGV.index("--short")
-  ARGV[i] = "-sp"
-end
-
 parser.parse!
 
+# Define default params
 options[:file]      = ARGV[0] if ARGV.size == 1 # user first argument as filename
 options[:sort]    ||= :time # default order
 options[:filter]  ||= :all  # default order
 options[:short]   ||= false
+options[:format]  ||= 'console'
 
 LogAnalyzer::Configuration.configure do |config|
   config.filter = options[:filter]
 end
 
-# puts "Running with: #{options.inspect}" # debug
+#puts "Running with: #{options.inspect}".green # debug
 
 if options[:file] && options[:sort]
   analyzer = LogAnalyzer.analyze(filename: options[:file])
   analyzer.run
   analyzer.order(by: options[:sort])
-  case options[:format].to_s
+  case options[:format]
+  when 'pdf'
+    analyzer.to_pdf(LogAnalyzer::Utils.report_name('pdf'), short: options[:short])
   when 'csv'
-    analyzer.to_csv
+    analyzer.to_csv(LogAnalyzer::Utils.report_name('csv'), short: options[:short])
   else
     analyzer.visualize(short: options[:short])
   end

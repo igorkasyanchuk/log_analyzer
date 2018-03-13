@@ -8,6 +8,8 @@ See how fast is rendering in your Ruby on Rails app. Based on information from l
 
 [![Sample](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/screenshot.png)](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/screenshot.png)
 
+[![Reports](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/reports.png)](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/reports.png)
+
 You can see columns:
 
 * Type - type of file (partial or view = P or V)
@@ -38,18 +40,21 @@ Or install it yourself as:
 ## Usage
 
 After installation run in console command `log_analyzer -f log/development.log`. You can change the file or sorting (time, count, name).
+
 Samples:
 
 * `log_analyzer log/development.log -s count`
 * `log_analyzer log/production.log`
+* `log_analyzer production.log -csv`
+* `log_analyzer production.log -pdf`
 * `log_analyzer -f log/production.log -s name`
 * `log_analyzer -f log/production.log -s time -f v`
 * `log_analyzer -file log/production.log -sort count`
 * `log_analyzer -file log/production.log -sort count -filter view`
 * `log_analyzer -file log/production.log -sort count -filter partial`
-* `log_analyzer -file log/production.log -sort time -filter P`
-* `log_analyzer log/production.log --short`
-* `log_analyzer log/production.log -sp`
+* `log_analyzer -file log/production.log -sort time -filter p`
+* `log_analyzer development.log -csv -s time -f p`
+* `log_analyzer log/production.log -pdf --short`
 * `log_analyzer -file log/production.log --short`
 * `log_analyzer --help`
 
@@ -74,13 +79,12 @@ Big thank you to all our contributors:
 * [@ck3g](https://github.com/ck3g)
 * [@ritaritual](https://github.com/ritaritual)
 * [@y-yagi](https://github.com/y-yagi)
+* [@RafaelHashimoto](https://github.com/RafaelHashimoto)
 
 ## TODO
 
 * more analytics
 * more specs
-* export to PDF
-* export to CSV
 * export to XLS
 * export to HTML/CSS/JS with datatable.js
 
