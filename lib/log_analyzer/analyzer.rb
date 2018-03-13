@@ -1,5 +1,5 @@
 module LogAnalyzer
-
+  
   class Analyzer
     DEFAULT_TABLE_WIDTH = 120 # width
     CONTENT_LENGTH      = (0..DEFAULT_TABLE_WIDTH - 20).freeze
@@ -98,6 +98,21 @@ module LogAnalyzer
       end
     end
 
+    def to_xls(out_filename, short: false)
+      xls = Spreadsheet::Workbook.new
+      xls.create_worksheet
+      #XLS header
+      xls.worksheet(0).insert_row(0, HEADER)
+      #XLS content
+      stats.each do |path, stat|
+        xls.worksheet(0).insert_row(
+          xls.worksheet(0).last_row_index + 1,
+          xls_format_row(path, stat, short)
+        )
+      end
+      xls.write("#{Dir.pwd}/#{out_filename}")
+    end
+
     private
 
     def console_row(path, stat, short)
@@ -124,6 +139,7 @@ module LogAnalyzer
 
     alias :pdf_row :simple_row
     alias :csv_format_row :simple_row
+    alias :xls_format_row :simple_row
 
     def new_table
       Terminal::Table.new(headings: HEADER, width: DEFAULT_TABLE_WIDTH)
