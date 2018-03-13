@@ -54,6 +54,7 @@ Samples:
 * `log_analyzer -file log/production.log -sort count -filter partial`
 * `log_analyzer -file log/production.log -sort time -filter p`
 * `log_analyzer development.log -csv -s time -f p`
+* `log_analyzer development.log -xls -s time -f p`
 * `log_analyzer log/production.log -pdf --short`
 * `log_analyzer -file log/production.log --short`
 * `log_analyzer --help`
