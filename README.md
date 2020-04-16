@@ -49,6 +49,7 @@ Samples:
 * `log_analyzer production.log -pdf`
 * `log_analyzer -f log/production.log -s name`
 * `log_analyzer -f log/production.log -s time -f v`
+* `log_analyzer -f log/production.log -s rtime -f v`
 * `log_analyzer -file log/production.log -sort count`
 * `log_analyzer -file log/production.log -sort count -filter view`
 * `log_analyzer -file log/production.log -sort count -filter partial`
@@ -81,6 +82,7 @@ Big thank you to all our contributors:
 * [@ritaritual](https://github.com/ritaritual)
 * [@y-yagi](https://github.com/y-yagi)
 * [@RafaelHashimoto](https://github.com/RafaelHashimoto)
+* [@Quentinchampenois](https://github.com/Quentinchampenois)
 
 ## TODO
 
