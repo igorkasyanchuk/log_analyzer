@@ -37,7 +37,7 @@ module LogAnalyzer
       when :time
         @stats = @stats.sort{|a, b| a[1].avg <=> b[1].avg }
       when :rtime
-        @stats = @stats.sort{|a, b| a[1].avg <=> b[1].avg }.reverse
+        @stats = @stats.sort{|a, b| b[1].avg <=> a[1].avg }
       when :count
         @stats = @stats.sort{|a, b| a[1].count <=> b[1].count }
       end
