@@ -19,6 +19,7 @@ RSpec.describe LogAnalyzer::Analyzer do
   it "sorts" do
     analyzer.run
     expect { analyzer.order(by: :time)  }.not_to raise_error
+    expect { analyzer.order(by: :rtime)  }.not_to raise_error
     expect { analyzer.order(by: :name)  }.not_to raise_error
     expect { analyzer.order(by: :count) }.not_to raise_error
   end
