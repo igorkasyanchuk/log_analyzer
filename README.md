@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/igorkasyanchuk/log_analyzer.svg?branch=master)](https://travis-ci.org/igorkasyanchuk/log_analyzer)
+[![RailsJazz](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/my_other.svg?raw=true)](https://www.railsjazz.com)
 
 # LogAnalyzer
 
