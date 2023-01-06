@@ -6,6 +6,7 @@ PATH
       prawn
       prawn-table
       rake
+      spreadsheet
       terminal-table
       thor
 
@@ -18,16 +19,16 @@ GEM
     docile (1.1.5)
     json (2.0.3)
     method_source (0.9.0)
-    pdf-core (0.7.0)
-    prawn (2.2.2)
-      pdf-core (~> 0.7.0)
-      ttfunk (~> 1.5)
+    pdf-core (0.9.0)
+    prawn (2.4.0)
+      pdf-core (~> 0.9.0)
+      ttfunk (~> 1.7)
     prawn-table (0.2.2)
       prawn (>= 1.3.0, < 3.0.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    rake (13.0.1)
+    rake (13.0.6)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
@@ -49,11 +50,11 @@ GEM
     simplecov-html (0.10.0)
     spreadsheet (1.2.6)
       ruby-ole (>= 1.0)
-    terminal-table (1.8.0)
-      unicode-display_width (~> 1.1, >= 1.1.1)
-    thor (1.0.1)
-    ttfunk (1.6.2.1)
-    unicode-display_width (1.7.0)
+    terminal-table (3.0.2)
+      unicode-display_width (>= 1.1.1, < 3)
+    thor (1.2.1)
+    ttfunk (1.7.0)
+    unicode-display_width (2.4.2)
 
 PLATFORMS
   ruby
