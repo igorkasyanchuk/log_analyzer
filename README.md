@@ -85,6 +85,7 @@ Big thank you to all our contributors:
 * [@y-yagi](https://github.com/y-yagi)
 * [@RafaelHashimoto](https://github.com/RafaelHashimoto)
 * [@Quentinchampenois](https://github.com/Quentinchampenois)
+* [@denys281](https://github.com/denys281)
 
 ## TODO
 
