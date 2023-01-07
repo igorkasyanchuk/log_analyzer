@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    log_analyzer (0.3.2)
+    log_analyzer (0.3.3)
       colorize
       prawn
       prawn-table
@@ -68,4 +68,4 @@ DEPENDENCIES
   spreadsheet
 
 BUNDLED WITH
-   1.17.3
+   2.3.7
