@@ -1,0 +1,48 @@
+I, [2023-01-09T15:53:15.455499 #3424307]  INFO -- : [dc43a55a-43e2-4af7-aa5d-3b58e69d67ae] Processing by RepositoriesController#show as HTML
+I, [2023-01-09T15:53:15.455976 #3424307]  INFO -- : [dc43a55a-43e2-4af7-aa5d-3b58e69d67ae]   Parameters: {"login"=>"sindresorhus", "name"=>"awesome"}
+I, [2023-01-09T15:53:15.788620 #3424307]  INFO -- : [dc43a55a-43e2-4af7-aa5d-3b58e69d67ae]   Rendered repositories/show.html.erb within layouts/application (Duration: 47.8ms | Allocations: 30314)
+I, [2023-01-09T15:53:15.797791 #3424307]  INFO -- : [dc43a55a-43e2-4af7-aa5d-3b58e69d67ae]   Rendered layout layouts/application.html.erb (Duration: 57.0ms | Allocations: 33653)
+I, [2023-01-09T15:53:15.798562 #3424307]  INFO -- : [dc43a55a-43e2-4af7-aa5d-3b58e69d67ae] Completed 200 OK in 342ms (Views: 57.6ms | ActiveRecord: 249.1ms | Allocations: 54733)
+I, [2023-01-09T15:53:19.330655 #3424307]  INFO -- : [92a4af8d-155e-4cc7-8ac8-3772ffee1d6d] Started GET "/u/jamesroberts" for 114.119.150.85 at 2023-01-09 15:53:19 +0000
+I, [2023-01-09T15:53:19.334003 #3424307]  INFO -- : [92a4af8d-155e-4cc7-8ac8-3772ffee1d6d] Processing by UsersController#show as HTML
+I, [2023-01-09T15:53:19.334308 #3424307]  INFO -- : [92a4af8d-155e-4cc7-8ac8-3772ffee1d6d]   Parameters: {"login"=>"jamesroberts"}
+I, [2023-01-09T15:53:19.361095 #3424307]  INFO -- : [92a4af8d-155e-4cc7-8ac8-3772ffee1d6d]   Rendered users/show.html.erb within layouts/application (Duration: 23.9ms | Allocations: 8009)
+I, [2023-01-09T15:53:19.366824 #3424307]  INFO -- : [92a4af8d-155e-4cc7-8ac8-3772ffee1d6d]   Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 10039)
+I, [2023-01-09T15:53:19.367421 #3424307]  INFO -- : [92a4af8d-155e-4cc7-8ac8-3772ffee1d6d] Completed 200 OK in 33ms (Views: 23.6ms | ActiveRecord: 7.4ms | Allocations: 10457)
+I, [2023-01-09T15:53:24.273350 #3424307]  INFO -- : [811862e1-a1c2-48fe-8199-3747b85b7074] Started GET "/account/syncs" for 46.172.149.177 at 2023-01-09 15:53:24 +0000
+I, [2023-01-09T15:53:24.276196 #3424307]  INFO -- : [811862e1-a1c2-48fe-8199-3747b85b7074] Processing by Account::AnalyticsController#syncs as HTML
+I, [2023-01-09T15:53:24.307748 #3424307]  INFO -- : [811862e1-a1c2-48fe-8199-3747b85b7074]   Rendered account/analytics/syncs.html.erb within layouts/account (Duration: 26.2ms | Allocations: 16852)
+I, [2023-01-09T15:53:24.318789 #3424307]  INFO -- : [811862e1-a1c2-48fe-8199-3747b85b7074]   Rendered inline template within layouts/application (Duration: 1.9ms | Allocations: 1336)
+I, [2023-01-09T15:53:24.324326 #3424307]  INFO -- : [811862e1-a1c2-48fe-8199-3747b85b7074]   Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3984)
+I, [2023-01-09T15:53:24.324739 #3424307]  INFO -- : [811862e1-a1c2-48fe-8199-3747b85b7074]   Rendered layout layouts/account.html.erb (Duration: 43.3ms | Allocations: 22454)
+I, [2023-01-09T15:53:24.325177 #3424307]  INFO -- : [811862e1-a1c2-48fe-8199-3747b85b7074] Completed 200 OK in 48ms (Views: 37.2ms | ActiveRecord: 7.5ms | Allocations: 23171)
+I, [2023-01-09T15:54:06.250644 #3424307]  INFO -- : [dfd931d4-557e-44f0-9bf4-a2b7d3bb176c] Started GET "/u/tobiassjosten" for 66.249.66.29 at 2023-01-09 15:54:06 +0000
+I, [2023-01-09T15:54:06.252877 #3424307]  INFO -- : [dfd931d4-557e-44f0-9bf4-a2b7d3bb176c] Processing by UsersController#show as HTML
+I, [2023-01-09T15:54:06.253160 #3424307]  INFO -- : [dfd931d4-557e-44f0-9bf4-a2b7d3bb176c]   Parameters: {"login"=>"tobiassjosten"}
+I, [2023-01-09T15:54:06.297350 #3424307]  INFO -- : [dfd931d4-557e-44f0-9bf4-a2b7d3bb176c]   Rendered users/show.html.erb within layouts/application (Duration: 40.8ms | Allocations: 12627)
+I, [2023-01-09T15:54:06.303442 #3424307]  INFO -- : [dfd931d4-557e-44f0-9bf4-a2b7d3bb176c]   Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 14641)
+I, [2023-01-09T15:54:06.304221 #3424307]  INFO -- : [dfd931d4-557e-44f0-9bf4-a2b7d3bb176c] Completed 200 OK in 51ms (Views: 35.8ms | ActiveRecord: 13.0ms | Allocations: 15058)
+I, [2023-01-09T15:54:07.292936 #3424307]  INFO -- : [aebc62bd-e872-42f9-9dbb-fd08c767ca2b] Started GET "/u/csswizardry" for 66.249.66.139 at 2023-01-09 15:54:07 +0000
+I, [2023-01-09T15:54:07.294977 #3424307]  INFO -- : [aebc62bd-e872-42f9-9dbb-fd08c767ca2b] Processing by UsersController#show as HTML
+I, [2023-01-09T15:54:07.295280 #3424307]  INFO -- : [aebc62bd-e872-42f9-9dbb-fd08c767ca2b]   Parameters: {"login"=>"csswizardry"}
+I, [2023-01-09T15:54:07.342514 #3424307]  INFO -- : [aebc62bd-e872-42f9-9dbb-fd08c767ca2b]   Rendered users/show.html.erb within layouts/application (Duration: 44.1ms | Allocations: 16323)
+I, [2023-01-09T15:54:07.347934 #3424307]  INFO -- : [aebc62bd-e872-42f9-9dbb-fd08c767ca2b]   Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 18337)
+I, [2023-01-09T15:54:07.348578 #3424307]  INFO -- : [aebc62bd-e872-42f9-9dbb-fd08c767ca2b] Completed 200 OK in 53ms (Views: 37.3ms | ActiveRecord: 13.9ms | Allocations: 18753)
+I, [2023-01-09T15:54:17.498021 #3424307]  INFO -- : [fbd89da4-c60f-4aaa-96cc-c02fddf15773] Started GET "/r/suquant/tf_wireguard" for 114.119.133.53 at 2023-01-09 15:54:17 +0000
+I, [2023-01-09T15:54:17.499952 #3424307]  INFO -- : [fbd89da4-c60f-4aaa-96cc-c02fddf15773] Processing by RepositoriesController#show as HTML
+I, [2023-01-09T15:54:17.500257 #3424307]  INFO -- : [fbd89da4-c60f-4aaa-96cc-c02fddf15773]   Parameters: {"login"=>"suquant", "name"=>"tf_wireguard"}
+I, [2023-01-09T15:54:17.548892 #3424307]  INFO -- : [fbd89da4-c60f-4aaa-96cc-c02fddf15773]   Rendered repositories/show.html.erb within layouts/application (Duration: 25.4ms | Allocations: 17649)
+I, [2023-01-09T15:54:17.553769 #3424307]  INFO -- : [fbd89da4-c60f-4aaa-96cc-c02fddf15773]   Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 19651)
+I, [2023-01-09T15:54:17.554485 #3424307]  INFO -- : [fbd89da4-c60f-4aaa-96cc-c02fddf15773] Completed 200 OK in 54ms (Views: 29.9ms | ActiveRecord: 15.8ms | Allocations: 21749)
+I, [2023-01-09T15:54:25.881548 #3424307]  INFO -- : [2b666d0c-72e4-4e26-97b0-6bd77834e20c] Started GET "/u/herrbischoff" for 114.119.150.1 at 2023-01-09 15:54:25 +0000
+I, [2023-01-09T15:54:25.883350 #3424307]  INFO -- : [2b666d0c-72e4-4e26-97b0-6bd77834e20c] Processing by UsersController#show as HTML
+I, [2023-01-09T15:54:25.883710 #3424307]  INFO -- : [2b666d0c-72e4-4e26-97b0-6bd77834e20c]   Parameters: {"login"=>"herrbischoff"}
+I, [2023-01-09T15:54:25.938324 #3424307]  INFO -- : [2b666d0c-72e4-4e26-97b0-6bd77834e20c]   Rendered users/show.html.erb within layouts/application (Duration: 51.0ms | Allocations: 15669)
+I, [2023-01-09T15:54:25.944059 #3424307]  INFO -- : [2b666d0c-72e4-4e26-97b0-6bd77834e20c]   Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 17683)
+I, [2023-01-09T15:54:25.944819 #3424307]  INFO -- : [2b666d0c-72e4-4e26-97b0-6bd77834e20c] Completed 200 OK in 61ms (Views: 42.0ms | ActiveRecord: 16.6ms | Allocations: 18099)
+I, [2023-01-09T15:54:44.131866 #3424307]  INFO -- : [78c705d3-36ae-448b-b6c9-e7cd50dc25d5] Started GET "/o/rails" for 54.36.148.126 at 2023-01-09 15:54:44 +0000
+I, [2023-01-09T15:54:44.133819 #3424307]  INFO -- : [78c705d3-36ae-448b-b6c9-e7cd50dc25d5] Processing by GithubOrganizationsController#show as HTML
+I, [2023-01-09T15:54:44.134074 #3424307]  INFO -- : [78c705d3-36ae-448b-b6c9-e7cd50dc25d5]   Parameters: {"login"=>"rails"}
+I, [2023-01-09T15:54:44.210208 #3424307]  INFO -- : [78c705d3-36ae-448b-b6c9-e7cd50dc25d5]   Rendered organizations/show.html.erb within layouts/application (Duration: 73.1ms | Allocations: 32611)
+I, [2023-01-09T15:54:44.217733 #3424307]  INFO -- : [78c705d3-36ae-448b-b6c9-e7cd50dc25d5]   Rendered layout layouts/application.html.erb (Duration: 80.6ms | Allocations: 34625)
+I, [2023-01-09T15:54:44.218562 #3424307]  INFO -- : [78c705d3-36ae-448b-b6c9-e7cd50dc25d5] Completed 200 OK in 84ms (Views: 58.5ms | ActiveRecord: 23.9ms | Allocations: 35042)

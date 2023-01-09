@@ -29,6 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "prawn"
   spec.add_dependency "prawn-table"
   spec.add_dependency "spreadsheet"
+  spec.add_dependency "matrix"
 
   spec.add_development_dependency "bundler", "> 1.14"
   spec.add_development_dependency "rspec", "~> 3.0"

@@ -1,13 +1,15 @@
 require "bundler/setup"
 
 require 'simplecov'
+require 'pry'
 
-SimpleCov.start
-
-RSPEC_ROOT = File.dirname(__FILE__)
-TEST_FILE  = "#{RSPEC_ROOT}/files/file.log"
+RSPEC_ROOT  = File.dirname(__FILE__)
+TEST_FILE   = "#{RSPEC_ROOT}/files/file.log"
+TEST_FILE_7 = "#{RSPEC_ROOT}/files/file7.log"
 
 require "log_analyzer"
+
+puts "Using: #{LogAnalyzer::Analyzer::MATCHER}"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -17,4 +19,3 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
-

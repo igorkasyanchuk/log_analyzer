@@ -86,6 +86,7 @@ Big thank you to all our contributors:
 * [@RafaelHashimoto](https://github.com/RafaelHashimoto)
 * [@Quentinchampenois](https://github.com/Quentinchampenois)
 * [@denys281](https://github.com/denys281)
+* [@drodeo](https://github.com/drodeo)
 
 ## TODO
 

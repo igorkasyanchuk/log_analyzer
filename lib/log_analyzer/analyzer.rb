@@ -5,7 +5,7 @@ module LogAnalyzer
     CONTENT_LENGTH      = (0..DEFAULT_TABLE_WIDTH - 20).freeze
     ROWS_FOR_FOOTER     = 10
     HEADER              = ['Type', 'View', 'Count', 'AVG (ms)', 'Max', 'Min'].freeze
-    MATCHER             = RUBY_VERSION >= '3.0' ? %r{Rendered (.*/.*) \(Duration:(.*)ms | \)}.freeze : %r{Rendered (.*/.*) \((.*)ms\)}.freeze
+    MATCHER             = RUBY_VERSION >= '3.0' ? %r{Rendered (.*\/.*) \(Duration:(.*)ms | \)}.freeze : %r{Rendered (.*\/.*) \((.*)ms\)}.freeze
 
     attr_reader :filename
     attr_reader :stats
