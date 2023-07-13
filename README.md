@@ -80,6 +80,9 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/igorka
 
 ## Contributors
 
+[<img src="https://opensource-heroes.com/svg/embed/igorkasyanchuk/log_analyzer"
+/>](https://opensource-heroes.com/r/igorkasyanchuk/log_analyzer)
+
 Big thank you to all our contributors:
 
 * [@ck3g](https://github.com/ck3g)
