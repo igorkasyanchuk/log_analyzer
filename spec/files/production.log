@@ -1,0 +1,138 @@
+Started GET "/dashboard" for 192.168.0.3 at 2024-11-26 10:23:10 +0000
+Processing by DashboardController#index as HTML
+Rendered dashboard/index.html.slim within layouts/admin (150.3ms)
+Completed 200 OK in 300ms (Views: 200.5ms | ActiveRecord: 50.5ms)
+Started DELETE "/favorites/1" for 192.168.0.4 at 2024-11-26 10:24:25 +0000
+Processing by FavoritesController#destroy as JS
+Completed 204 No Content in 50ms (Views: 20.4ms | ActiveRecord: 10.3ms)
+Started GET "/articles/latest" for 192.168.0.1 at 2024-11-26 10:25:11 +0000
+Processing by ArticlesController#latest as HTML
+Rendered articles/_latest_articles.html.slim (40.1ms)
+Completed 200 OK in 250ms (Views: 150.4ms | ActiveRecord: 45.3ms)
+Started GET "/users/1" for 192.168.0.1 at 2024-11-26 10:26:30 +0000
+Processing by UsersController#show as HTML
+Rendered users/_profile.html.slim (70.2ms)
+Rendered users/show.html.slim within layouts/normal (200.3ms)
+Completed 200 OK in 300ms (Views: 230.4ms | ActiveRecord: 45.8ms)
+Started PATCH "/profile" for 192.168.0.5 at 2024-11-26 10:27:02 +0000
+Processing by ProfileController#update as HTML
+Redirected to /profile
+Completed 302 Found in 130ms (Views: 60.3ms | ActiveRecord: 30.3ms)
+Started GET "/profile" for 192.168.0.5 at 2024-11-26 10:27:03 +0000
+Processing by ProfileController#show as HTML
+Rendered profile/_details.html.slim (35.2ms)
+Rendered profile/show.html.slim within layouts/normal (420.3ms)
+Completed 200 OK in 550ms (Views: 330.4ms | ActiveRecord: 80.3ms)
+Started GET "/profile/edit" for 192.168.0.6 at 2024-11-26 10:28:10 +0000
+Processing by ProfileController#edit as HTML
+Rendered profile/_form.html.slim (70.1ms)
+Rendered profile/edit.html.slim within layouts/normal (100.4ms)
+Completed 200 OK in 190ms (Views: 120.4ms | ActiveRecord: 25.3ms)
+Started GET "/site-map" for 192.168.0.7 at 2024-11-26 10:29:50 +0000
+Processing by SiteMapController#index as XML
+Completed 200 OK in 20ms (Views: 5.3ms | ActiveRecord: 2.3ms)
+Started POST "/sessions" for 192.168.0.8 at 2024-11-26 10:30:22 +0000
+Processing by SessionsController#create as HTML
+Redirected to /
+Completed 302 Found in 80ms (Views: 30.3ms | ActiveRecord: 15.3ms)
+Started GET "/notifications" for 192.168.0.9 at 2024-11-26 10:31:05 +0000
+Processing by NotificationsController#index as HTML
+Rendered notifications/index.html.slim (30.1ms)
+Completed 200 OK in 100ms (Views: 60.4ms | ActiveRecord: 15.3ms)
+Started GET "/settings" for 192.168.0.10 at 2024-11-26 10:32:45 +0000
+Processing by SettingsController#edit as HTML
+Rendered settings/edit.html.slim within layouts/admin (80.3ms)
+Completed 200 OK in 150ms (Views: 110.4ms | ActiveRecord: 20.3ms)
+Started PUT "/settings" for 192.168.0.10 at 2024-11-26 10:33:05 +0000
+Processing by SettingsController#update as HTML
+Redirected to /settings
+Completed 302 Found in 90ms (Views: 40.3ms | ActiveRecord: 20.3ms)
+Started GET "/articles" for 192.168.0.11 at 2024-11-26 10:34:10 +0000
+Processing by ArticlesController#index as HTML
+Rendered articles/index.html.slim (300.2ms)
+Completed 200 OK in 480ms (Views: 320.4ms | ActiveRecord: 90.3ms)
+Started GET "/categories" for 192.168.0.12 at 2024-11-26 10:35:15 +0000
+Processing by CategoriesController#index as HTML
+Rendered categories/index.html.slim (40.5ms)
+Completed 200 OK in 140ms (Views: 90.4ms | ActiveRecord: 20.3ms)
+Started GET "/search?q=rails" for 192.168.0.13 at 2024-11-26 10:36:00 +0000
+Processing by SearchController#index as HTML
+Rendered search/results.html.slim (60.1ms)
+Completed 200 OK in 200ms (Views: 120.4ms | ActiveRecord: 35.3ms)
+Started GET "/profile" for 192.168.0.1 at 2024-11-26 10:37:15 +0000
+Processing by ProfileController#show as HTML
+Rendered profile/show.html.slim within layouts/normal (800.8ms)
+Completed 200 OK in 1050ms (Views: 580.5ms | ActiveRecord: 320.5ms)
+Started GET "/articles/popular" for 192.168.0.14 at 2024-11-26 10:38:20 +0000
+Processing by ArticlesController#popular as HTML
+Rendered articles/_popular_articles.html.slim (50.5ms)
+Completed 200 OK in 180ms (Views: 110.4ms | ActiveRecord: 20.3ms)
+Started POST "/favorites" for 192.168.0.15 at 2024-11-26 10:39:05 +0000
+Processing by FavoritesController#create as JS
+Rendered favorites/_add_icon.html.erb (0.4ms)
+Completed 201 Created in 100ms (Views: 60.3ms | ActiveRecord: 20.3ms)
+Started GET "/dashboard/stats" for 192.168.0.16 at 2024-11-26 10:40:15 +0000
+Processing by DashboardController#stats as JSON
+Completed 200 OK in 90ms (Views: 20.3ms | ActiveRecord: 30.3ms)
+Started GET "/profile/edit" for 192.168.0.17 at 2024-11-26 10:41:10 +0000
+Processing by ProfileController#edit as HTML
+Rendered profile/_form.html.slim (80.1ms)
+Completed 200 OK in 150ms (Views: 100.4ms | ActiveRecord: 20.3ms)
+Started PATCH "/profile" for 192.168.0.17 at 2024-11-26 10:41:45 +0000
+Processing by ProfileController#update as HTML
+Redirected to /profile
+Completed 302 Found in 120ms (Views: 50.3ms | ActiveRecord: 30.3ms)
+Started GET "/profile" for 192.168.0.17 at 2024-11-26 10:41:47 +0000
+Processing by ProfileController#show as HTML
+Rendered profile/_details.html.slim (40.5ms)
+Completed 200 OK in 320ms (Views: 210.4ms | ActiveRecord: 80.3ms)
+Started DELETE "/favorites/2" for 192.168.0.18 at 2024-11-26 10:42:10 +0000
+Processing by FavoritesController#destroy as JS
+Completed 204 No Content in 80ms (Views: 30.4ms | ActiveRecord: 20.3ms)
+Started GET "/site-map" for 192.168.0.19 at 2024-11-26 10:43:30 +0000
+Processing by SiteMapController#index as XML
+Completed 200 OK in 40ms (Views: 10.4ms | ActiveRecord: 5.3ms)
+Started GET "/articles" for 192.168.0.11 at 2024-11-26 10:44:10 +0000
+Processing by ArticlesController#index as HTML
+Rendered articles/index.html.slim (300.2ms)
+Completed 200 OK in 450ms (Views: 310.4ms | ActiveRecord: 90.3ms)
+Started GET "/search?q=api" for 192.168.0.20 at 2024-11-26 10:45:15 +0000
+Processing by SearchController#index as HTML
+Rendered search/results.html.slim (60.1ms)
+Completed 200 OK in 200ms (Views: 120.4ms | ActiveRecord: 40.3ms)
+Started GET "/notifications" for 192.168.0.21 at 2024-11-26 10:46:05 +0000
+Processing by NotificationsController#index as HTML
+Rendered notifications/index.html.slim (30.1ms)
+Completed 200 OK in 110ms (Views: 70.4ms | ActiveRecord: 15.3ms)
+Started POST "/sessions" for 192.168.0.22 at 2024-11-26 10:47:22 +0000
+Processing by SessionsController#create as HTML
+Redirected to /
+Completed 302 Found in 70ms (Views: 20.3ms | ActiveRecord: 15.3ms)
+Started GET "/categories" for 192.168.0.23 at 2024-11-26 10:48:45 +0000
+Processing by CategoriesController#index as HTML
+Rendered categories/index.html.slim (40.5ms)
+Completed 200 OK in 130ms (Views: 80.4ms | ActiveRecord: 20.3ms)
+Started GET "/profile" for 192.168.0.1 at 2024-11-26 10:49:15 +0000
+Processing by ProfileController#show as HTML
+Rendered profile/show.html.slim within layouts/normal (800.8ms)
+Completed 200 OK in 1050ms (Views: 580.5ms | ActiveRecord: 320.5ms)
+Started GET "/articles/latest" for 192.168.0.24 at 2024-11-26 10:50:11 +0000
+Processing by ArticlesController#latest as HTML
+Rendered articles/_latest_articles.html.slim (40.1ms)
+Completed 200 OK in 250ms (Views: 150.4ms | ActiveRecord: 45.3ms)
+Started PATCH "/settings" for 192.168.0.25 at 2024-11-26 10:51:05 +0000
+Processing by SettingsController#update as HTML
+Redirected to /settings
+Completed 302 Found in 90ms (Views: 30.3ms | ActiveRecord: 25.3ms)
+Started GET "/settings" for 192.168.0.25 at 2024-11-26 10:51:07 +0000
+Processing by SettingsController#edit as HTML
+Rendered settings/edit.html.slim within layouts/admin (80.3ms)
+Completed 200 OK in 150ms (Views: 110.4ms | ActiveRecord: 25.3ms)
+Started GET "/search?q=update" for 192.168.0.26 at 2024-11-26 10:52:30 +0000
+Processing by SearchController#index as HTML
+Rendered search/_results.html.slim (70.5ms)
+Completed 200 OK in 240ms (Views: 140.4ms | ActiveRecord: 50.3ms)
+Started POST "/favorites" for 192.168.0.27 at 2024-11-26 10:53:15 +0000
+Processing by FavoritesController#create as JS
+Rendered favorites/_add_icon.html.erb (0.5ms)
+Completed 201 Created in 110ms (Views: 60.3ms | ActiveRecord: 30.3ms)

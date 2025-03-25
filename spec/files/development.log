@@ -1,0 +1,133 @@
+Rendered favorites/_add_icon.html.erb (0.3ms)
+Rendered favorites/_user.html.slim (12.1ms)
+Completed 500 Internal Server Error in 320ms (Views: 200.4ms | ActiveRecord: 100.3ms)
+Rendered articles/_latest_articles.html.slim (45.5ms)
+Read fragment views/articles-1234-1517258097/en/7b62f917a5f3ab118952392bf574d039 (0.3ms)
+Rendered articles/_comment_section.html.slim (28.0ms)
+Rendered shared/_pagination.html.slim (5.4ms)
+Rendered favorites/_add_icon.html.erb (0.4ms)
+Rendered favorites/_user.html.slim (11.9ms)
+Completed 200 OK in 890ms (Views: 530.4ms | ActiveRecord: 300.3ms)
+Rendered shared/_footer.html.slim (2.8ms)
+Rendered shared/_header.html.slim (14.7ms)
+Rendered inline template within layouts/application (60.1ms)
+Read fragment views/shared-ga/en/6a8c5d20482ec5f3b2073e052847c608 (0.5ms)
+Rendered shared/_onesignal.html.erb (0.2ms)
+Rendered shared/_fb_recommend.html.erb (0.1ms)
+Started GET "/users/1" for 127.0.0.1 at 2024-11-26 12:00:01 +0000
+Processing by UsersController#show as HTML
+Rendered users/_profile.html.slim (80.2ms)
+Rendered users/show.html.slim within layouts/normal (350.3ms)
+Completed 200 OK in 420ms (Views: 300.4ms | ActiveRecord: 90.3ms)
+Started GET "/articles/latest" for 127.0.0.1 at 2024-11-26 12:01:45 +0000
+Processing by ArticlesController#latest as HTML
+Rendered articles/_latest_articles.html.slim (50.3ms)
+Completed 200 OK in 310ms (Views: 200.4ms | ActiveRecord: 70.3ms)
+Rendered profile/_details.html.slim (35.2ms)
+Read fragment views/profile-details-5678-1517258097/en/8b62f197d5f3ab118952392bf574d037 (0.6ms)
+Rendered shared/_nav_menu.html.slim (10.5ms)
+Rendered shared/_footer.html.slim (3.1ms)
+Rendered shared/_header.html.slim (16.8ms)
+Completed 302 Found in 600ms (Views: 350.3ms | ActiveRecord: 120.3ms)
+Rendered articles/_article_preview.html.slim (24.5ms)
+Rendered articles/_sidebar_articles_cover.html.slim (18.0ms)
+Started POST "/favorites" for 192.168.0.1 at 2024-11-26 12:03:10 +0000
+Processing by FavoritesController#create as JS
+Rendered favorites/_add_icon.html.erb (0.5ms)
+Completed 201 Created in 120ms (Views: 80.3ms | ActiveRecord: 25.3ms)
+Started DELETE "/favorites/1" for 192.168.0.1 at 2024-11-26 12:04:02 +0000
+Processing by FavoritesController#destroy as JS
+Rendered favorites/_remove_icon.html.erb (0.6ms)
+Completed 204 No Content in 130ms (Views: 70.3ms | ActiveRecord: 30.3ms)
+Rendered profile/_gallery.html.slim (569.5ms)
+Read fragment views/user-public-show-info-other-544-1517258097-false/uk/6b62fa87d5f3ab118952392bf574d039 (0.4ms)
+Rendered shared/_pagination.html.slim (5.4ms)
+Completed 404 Not Found in 170ms (Views: 70.3ms | ActiveRecord: 40.3ms)
+Started GET "/dashboard" for 192.168.0.1 at 2024-11-26 12:05:30 +0000
+Processing by DashboardController#index as HTML
+Rendered dashboard/_stats.html.slim (90.5ms)
+Rendered dashboard/index.html.slim within layouts/admin (120.3ms)
+Completed 200 OK in 250ms (Views: 210.4ms | ActiveRecord: 25.3ms)
+Rendered shared/_header.html.slim (12.5ms)
+Rendered shared/_footer.html.slim (2.9ms)
+Rendered shared/_notification.html.slim (1.5ms)
+Started GET "/profile/edit" for 127.0.0.1 at 2024-11-26 12:06:10 +0000
+Processing by ProfileController#edit as HTML
+Rendered profile/_form.html.slim (80.2ms)
+Rendered profile/edit.html.slim within layouts/normal (100.4ms)
+Completed 200 OK in 160ms (Views: 130.4ms | ActiveRecord: 20.3ms)
+Started PATCH "/profile" for 127.0.0.1 at 2024-11-26 12:07:02 +0000
+Processing by ProfileController#update as HTML
+Redirected to /profile
+Completed 302 Found in 120ms (Views: 60.3ms | ActiveRecord: 40.3ms)
+Started GET "/profile" for 127.0.0.1 at 2024-11-26 12:07:03 +0000
+Processing by ProfileController#show as HTML
+Rendered profile/_gallery.html.slim (569.5ms)
+Completed 200 OK in 800ms (Views: 600.3ms | ActiveRecord: 120.3ms)
+Started GET "/notifications" for 127.0.0.1 at 2024-11-26 12:08:10 +0000
+Processing by NotificationsController#index as HTML
+Rendered notifications/index.html.slim (40.3ms)
+Rendered shared/_header.html.slim (14.5ms)
+Rendered shared/_footer.html.slim (3.1ms)
+Completed 200 OK in 190ms (Views: 120.4ms | ActiveRecord: 30.3ms)
+Started GET "/articles/1" for 127.0.0.1 at 2024-11-26 12:09:15 +0000
+Processing by ArticlesController#show as HTML
+Rendered articles/_article_detail.html.slim (70.1ms)
+Rendered shared/_comments.html.slim (40.2ms)
+Rendered articles/show.html.slim within layouts/normal (150.3ms)
+Completed 200 OK in 280ms (Views: 180.4ms | ActiveRecord: 50.3ms)
+Started GET "/search?q=example" for 127.0.0.1 at 2024-11-26 12:10:30 +0000
+Processing by SearchController#index as HTML
+Rendered search/_results.html.slim (90.1ms)
+Rendered shared/_header.html.slim (15.0ms)
+Completed 200 OK in 320ms (Views: 210.4ms | ActiveRecord: 80.3ms)
+Started GET "/settings" for 127.0.0.1 at 2024-11-26 12:11:15 +0000
+Processing by SettingsController#edit as HTML
+Rendered settings/edit.html.slim within layouts/normal (80.3ms)
+Completed 200 OK in 170ms (Views: 120.4ms | ActiveRecord: 25.3ms)
+Started PUT "/settings" for 127.0.0.1 at 2024-11-26 12:11:45 +0000
+Processing by SettingsController#update as HTML
+Redirected to /settings
+Completed 302 Found in 90ms (Views: 40.3ms | ActiveRecord: 20.3ms)
+Started GET "/categories" for 127.0.0.1 at 2024-11-26 12:12:25 +0000
+Processing by CategoriesController#index as HTML
+Rendered categories/index.html.slim (40.5ms)
+Completed 200 OK in 150ms (Views: 90.4ms | ActiveRecord: 30.3ms)
+Started GET "/profile" for 127.0.0.1 at 2024-11-26 12:13:15 +0000
+Processing by ProfileController#show as HTML
+Rendered profile/_details.html.slim (30.3ms)
+Rendered profile/show.html.slim within layouts/normal (200.4ms)
+Completed 200 OK in 300ms (Views: 230.4ms | ActiveRecord: 50.3ms)
+Started POST "/sessions" for 127.0.0.1 at 2024-11-26 12:14:10 +0000
+Processing by SessionsController#create as HTML
+Redirected to /
+Completed 302 Found in 100ms (Views: 50.3ms | ActiveRecord: 20.3ms)
+Started GET "/dashboard" for 127.0.0.1 at 2024-11-26 12:15:20 +0000
+Processing by DashboardController#index as HTML
+Rendered dashboard/_stats.html.slim (80.5ms)
+Completed 200 OK in 200ms (Views: 130.4ms | ActiveRecord: 40.3ms)
+Started GET "/articles/popular" for 127.0.0.1 at 2024-11-26 12:16:05 +0000
+Processing by ArticlesController#popular as HTML
+Rendered articles/_popular_articles.html.slim (50.3ms)
+Completed 200 OK in 160ms (Views: 110.4ms | ActiveRecord: 20.3ms)
+Rendered shared/_footer.html.slim (3.2ms)
+Rendered shared/_nav_menu.html.slim (10.4ms)
+Rendered shared/_onesignal.html.erb (0.3ms)
+Rendered favorites/_user.html.slim (14.1ms)
+Completed 500 Internal Server Error in 180ms (Views: 110.4ms | ActiveRecord: 50.3ms)
+Started GET "/profile/edit" for 127.0.0.1 at 2024-11-26 12:17:40 +0000
+Processing by ProfileController#edit as HTML
+Rendered profile/_form.html.slim (60.1ms)
+Completed 200 OK in 140ms (Views: 100.4ms | ActiveRecord: 30.3ms)
+Started PATCH "/profile" for 127.0.0.1 at 2024-11-26 12:18:30 +0000
+Processing by ProfileController#update as HTML
+Redirected to /profile
+Completed 302 Found in 130ms (Views: 70.3ms | ActiveRecord: 20.3ms)
+Started GET "/profile" for 127.0.0.1 at 2024-11-26 12:18:32 +0000
+Processing by ProfileController#show as HTML
+Rendered profile/_gallery.html.slim (560.5ms)
+Completed 200 OK in 800ms (Views: 580.3ms | ActiveRecord: 90.3ms)
+Started GET "/search?q=test" for 127.0.0.1 at 2024-11-26 12:19:45 +0000
+Processing by SearchController#index as HTML
+Rendered search/_results.html.slim (80.1ms)
+Completed 200 OK in 250ms (Views: 140.4ms | ActiveRecord: 50.3ms)
