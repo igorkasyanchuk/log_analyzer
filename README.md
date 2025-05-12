@@ -1,7 +1,8 @@
 [![Build Status](https://travis-ci.org/igorkasyanchuk/log_analyzer.svg?branch=master)](https://travis-ci.org/igorkasyanchuk/log_analyzer)
 [![RailsJazz](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/my_other.svg?raw=true)](https://www.railsjazz.com)
 [![https://www.patreon.com/igorkasyanchuk](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/patron.svg?raw=true)](https://www.patreon.com/igorkasyanchuk)
-[![Listed on OpenSource-Heroes.com](https://opensource-heroes.com/badge-v1.svg)](https://opensource-heroes.com/r/igorkasyanchuk/log_analyzer)
+
+[!["Buy Me A Coffee"](https://github.com/igorkasyanchuk/get-smart/blob/main/docs/snapshot-bmc-button-small.png?raw=true)](https://buymeacoffee.com/igorkasyanchuk)
 
 
 # LogAnalyzer
@@ -80,9 +81,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/igorka
 
 ## Contributors
 
-[<img src="https://opensource-heroes.com/svg/embed/igorkasyanchuk/log_analyzer"
-/>](https://opensource-heroes.com/r/igorkasyanchuk/log_analyzer)
-
 Big thank you to all our contributors:
 
 * [@ck3g](https://github.com/ck3g)
@@ -105,3 +103,5 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 [<img src="https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/more_gems.png?raw=true"
 />](https://www.railsjazz.com/?utm_source=github&utm_medium=bottom&utm_campaign=log_analyzer)
+
+[!["Buy Me A Coffee"](https://github.com/igorkasyanchuk/get-smart/blob/main/docs/snapshot-bmc-button.png?raw=true)](https://buymeacoffee.com/igorkasyanchuk)
