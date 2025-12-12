@@ -39,6 +39,10 @@ parser = OptionParser.new do |opts|
     options[:format] = 'xls'
   end
 
+  opts.on('-html', '--output=html', 'Export to .html with DataTables') do |v|
+    options[:format] = 'html'
+  end
+
   opts.on('-h', '--help', 'Displays Help') do
     puts opts
     exit
@@ -71,6 +75,8 @@ if options[:file] && options[:sort]
     analyzer.to_csv(LogAnalyzer::Utils.report_name('csv'), short: options[:short])
   when 'xls'
     analyzer.to_xls(LogAnalyzer::Utils.report_name('xls'), short: options[:short])
+  when 'html'
+    analyzer.to_html(LogAnalyzer::Utils.report_name('html'), short: options[:short])
   else
     analyzer.visualize(short: options[:short])
   end

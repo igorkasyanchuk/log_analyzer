@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/igorkasyanchuk/log_analyzer.svg?branch=master)](https://travis-ci.org/igorkasyanchuk/log_analyzer)
+[![CI](https://github.com/igorkasyanchuk/log_analyzer/actions/workflows/ci.yml/badge.svg)](https://github.com/igorkasyanchuk/log_analyzer/actions/workflows/ci.yml)
+[![Gem Version](https://badge.fury.io/rb/log_analyzer.svg)](https://badge.fury.io/rb/log_analyzer)
 [![RailsJazz](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/my_other.svg?raw=true)](https://www.railsjazz.com)
 [![https://www.patreon.com/igorkasyanchuk](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/patron.svg?raw=true)](https://www.patreon.com/igorkasyanchuk)
 
@@ -11,9 +12,14 @@ See how fast is rendering in your Ruby on Rails app. Based on information from l
 
 ## Sample
 
+**Console Output:**
 [![Sample](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/screenshot.png)](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/screenshot.png)
 
+**Export Formats:**
 [![Reports](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/reports.png)](https://raw.githubusercontent.com/igorkasyanchuk/log_analyzer/master/docs/reports.png)
+
+**NEW: Interactive HTML Report with DataTables:**
+The HTML export provides a beautiful, interactive web interface with sorting, searching, and pagination capabilities. [View Demo](docs/html-export-demo.html)
 
 You can see columns:
 
@@ -52,6 +58,7 @@ Samples:
 * `log_analyzer log/production.log`
 * `log_analyzer production.log -csv`
 * `log_analyzer production.log -pdf`
+* `log_analyzer production.log -html`
 * `log_analyzer -f log/production.log -s name`
 * `log_analyzer -f log/production.log -s time -f v`
 * `log_analyzer -f log/production.log -s rtime -f v`
@@ -61,7 +68,9 @@ Samples:
 * `log_analyzer -file log/production.log -sort time -filter p`
 * `log_analyzer development.log -csv -s time -f p`
 * `log_analyzer development.log -xls -s time -f p`
+* `log_analyzer development.log -html -s time -f p`
 * `log_analyzer log/production.log -pdf --short`
+* `log_analyzer log/production.log -html --short`
 * `log_analyzer -file log/production.log --short`
 * `log_analyzer --help`
 
@@ -77,7 +86,11 @@ To install this gem on your local machine, run `bundle exec rake install`. To re
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/igorkasyanchuk/log_analyzer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/igorkasyanchuk/log_analyzer. 
+
+Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Contributors
 
@@ -90,12 +103,19 @@ Big thank you to all our contributors:
 * [@Quentinchampenois](https://github.com/Quentinchampenois)
 * [@denys281](https://github.com/denys281)
 
+## Features
+
+* 📊 Console table output with color-coded performance metrics
+* 📄 Export to PDF, CSV, XLS formats
+* 🌐 Export to interactive HTML with DataTables.js (sorting, searching, pagination)
+* 🎯 Filter by view type (partials/views)
+* 📏 Path shortening for better readability
+* 🎨 Color-coded performance indicators (green/yellow/red)
+
 ## TODO
 
-* more analytics
+* more analytics (percentiles, trends, time-based grouping)
 * more specs
-* export to XLS
-* export to HTML/CSS/JS with datatable.js
 
 ## License
 
