@@ -3,6 +3,7 @@
 ## [Unreleased]
 
 ### Added
+
 - **HTML Export with DataTables.js**: Export analysis results to interactive HTML reports
   - Sortable columns
   - Searchable table
@@ -14,7 +15,9 @@
   - Usage with short paths: `log_analyzer log/production.log -html --short`
 
 ### Features
+
 The HTML export provides:
+
 - Interactive table with client-side sorting and searching
 - Beautiful gradient UI design
 - Color-coded average rendering times:

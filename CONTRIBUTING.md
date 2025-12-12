@@ -12,20 +12,20 @@ This project and everyone participating in it is governed by our [Code of Conduc
 
 Before creating bug reports, please check the existing issues to avoid duplicates. When you create a bug report, include as many details as possible:
 
-* **Use a clear and descriptive title**
-* **Describe the exact steps to reproduce the problem**
-* **Provide specific examples** (log files, commands used, etc.)
-* **Describe the behavior you observed and what you expected**
-* **Include your environment details** (Ruby version, OS, gem version)
+- **Use a clear and descriptive title**
+- **Describe the exact steps to reproduce the problem**
+- **Provide specific examples** (log files, commands used, etc.)
+- **Describe the behavior you observed and what you expected**
+- **Include your environment details** (Ruby version, OS, gem version)
 
 ### Suggesting Enhancements
 
 Enhancement suggestions are tracked as GitHub issues. When creating an enhancement suggestion, include:
 
-* **Use a clear and descriptive title**
-* **Provide a detailed description of the suggested enhancement**
-* **Explain why this enhancement would be useful**
-* **List some examples of how it would be used**
+- **Use a clear and descriptive title**
+- **Provide a detailed description of the suggested enhancement**
+- **Explain why this enhancement would be useful**
+- **List some examples of how it would be used**
 
 ### Pull Requests
 
@@ -56,18 +56,18 @@ ruby bin/log_analyzer spec/files/development.log
 
 ## Coding Standards
 
-* Follow Ruby style conventions
-* Write clear, descriptive commit messages
-* Add comments for complex logic
-* Keep methods focused and concise
-* Use meaningful variable and method names
+- Follow Ruby style conventions
+- Write clear, descriptive commit messages
+- Add comments for complex logic
+- Keep methods focused and concise
+- Use meaningful variable and method names
 
 ## Testing
 
-* Write RSpec tests for all new features
-* Ensure existing tests pass before submitting PR
-* Aim for good test coverage
-* Test edge cases and error conditions
+- Write RSpec tests for all new features
+- Ensure existing tests pass before submitting PR
+- Aim for good test coverage
+- Test edge cases and error conditions
 
 ## Project Structure
 
@@ -94,18 +94,21 @@ log_analyzer/
 Looking for something to work on? Check out these ideas:
 
 ### High Priority
+
 - [ ] Add percentile calculations (P95, P99)
 - [ ] Time-based grouping (analyze by hour/day)
 - [ ] Export to JSON format
 - [ ] Progress bar for large files
 
 ### Medium Priority
+
 - [ ] Controller/action grouping
 - [ ] Trend analysis over time
 - [ ] Memory usage tracking
 - [ ] Database query analysis
 
 ### Nice to Have
+
 - [ ] Web UI for viewing reports
 - [ ] Real-time monitoring mode
 - [ ] Configurable thresholds

@@ -5,7 +5,6 @@
 
 [!["Buy Me A Coffee"](https://github.com/igorkasyanchuk/get-smart/blob/main/docs/snapshot-bmc-button-small.png?raw=true)](https://buymeacoffee.com/igorkasyanchuk)
 
-
 # LogAnalyzer
 
 See how fast is rendering in your Ruby on Rails app. Based on information from logs. Provides you a picture of how often renders and how fast renders your views.
@@ -23,12 +22,12 @@ The HTML export provides a beautiful, interactive web interface with sorting, se
 
 You can see columns:
 
-* Type - type of file (partial or view = P or V)
-* View - name of view
-* Count - number of renders
-* Avg - average time of rendering (in milliseconds)
-* Max - maximum time of rendering
-* Min - minimum time of rendering
+- Type - type of file (partial or view = P or V)
+- View - name of view
+- Count - number of renders
+- Avg - average time of rendering (in milliseconds)
+- Max - maximum time of rendering
+- Min - minimum time of rendering
 
 ## Installation
 
@@ -54,25 +53,25 @@ After installation run in console command `log_analyzer -f log/development.log`.
 
 Samples:
 
-* `log_analyzer log/development.log -s count`
-* `log_analyzer log/production.log`
-* `log_analyzer production.log -csv`
-* `log_analyzer production.log -pdf`
-* `log_analyzer production.log -html`
-* `log_analyzer -f log/production.log -s name`
-* `log_analyzer -f log/production.log -s time -f v`
-* `log_analyzer -f log/production.log -s rtime -f v`
-* `log_analyzer -file log/production.log -sort count`
-* `log_analyzer -file log/production.log -sort count -filter view`
-* `log_analyzer -file log/production.log -sort count -filter partial`
-* `log_analyzer -file log/production.log -sort time -filter p`
-* `log_analyzer development.log -csv -s time -f p`
-* `log_analyzer development.log -xls -s time -f p`
-* `log_analyzer development.log -html -s time -f p`
-* `log_analyzer log/production.log -pdf --short`
-* `log_analyzer log/production.log -html --short`
-* `log_analyzer -file log/production.log --short`
-* `log_analyzer --help`
+- `log_analyzer log/development.log -s count`
+- `log_analyzer log/production.log`
+- `log_analyzer production.log -csv`
+- `log_analyzer production.log -pdf`
+- `log_analyzer production.log -html`
+- `log_analyzer -f log/production.log -s name`
+- `log_analyzer -f log/production.log -s time -f v`
+- `log_analyzer -f log/production.log -s rtime -f v`
+- `log_analyzer -file log/production.log -sort count`
+- `log_analyzer -file log/production.log -sort count -filter view`
+- `log_analyzer -file log/production.log -sort count -filter partial`
+- `log_analyzer -file log/production.log -sort time -filter p`
+- `log_analyzer development.log -csv -s time -f p`
+- `log_analyzer development.log -xls -s time -f p`
+- `log_analyzer development.log -html -s time -f p`
+- `log_analyzer log/production.log -pdf --short`
+- `log_analyzer log/production.log -html --short`
+- `log_analyzer -file log/production.log --short`
+- `log_analyzer --help`
 
 **Based on results you can get an idea what to optimize. For example optimizing most often rendering view could give huge benefit. Now with this tool you can find out what are the numbers.**
 
@@ -86,7 +85,7 @@ To install this gem on your local machine, run `bundle exec rake install`. To re
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/igorkasyanchuk/log_analyzer. 
+Bug reports and pull requests are welcome on GitHub at https://github.com/igorkasyanchuk/log_analyzer.
 
 Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
@@ -96,26 +95,26 @@ This project is intended to be a safe, welcoming space for collaboration, and co
 
 Big thank you to all our contributors:
 
-* [@ck3g](https://github.com/ck3g)
-* [@ritaritual](https://github.com/ritaritual)
-* [@y-yagi](https://github.com/y-yagi)
-* [@RafaelHashimoto](https://github.com/RafaelHashimoto)
-* [@Quentinchampenois](https://github.com/Quentinchampenois)
-* [@denys281](https://github.com/denys281)
+- [@ck3g](https://github.com/ck3g)
+- [@ritaritual](https://github.com/ritaritual)
+- [@y-yagi](https://github.com/y-yagi)
+- [@RafaelHashimoto](https://github.com/RafaelHashimoto)
+- [@Quentinchampenois](https://github.com/Quentinchampenois)
+- [@denys281](https://github.com/denys281)
 
 ## Features
 
-* 📊 Console table output with color-coded performance metrics
-* 📄 Export to PDF, CSV, XLS formats
-* 🌐 Export to interactive HTML with DataTables.js (sorting, searching, pagination)
-* 🎯 Filter by view type (partials/views)
-* 📏 Path shortening for better readability
-* 🎨 Color-coded performance indicators (green/yellow/red)
+- 📊 Console table output with color-coded performance metrics
+- 📄 Export to PDF, CSV, XLS formats
+- 🌐 Export to interactive HTML with DataTables.js (sorting, searching, pagination)
+- 🎯 Filter by view type (partials/views)
+- 📏 Path shortening for better readability
+- 🎨 Color-coded performance indicators (green/yellow/red)
 
 ## TODO
 
-* more analytics (percentiles, trends, time-based grouping)
-* more specs
+- more analytics (percentiles, trends, time-based grouping)
+- more specs
 
 ## License
 
