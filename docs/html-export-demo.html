@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogAnalyzer Report - Demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 2.5em;
+      }
+      .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        font-size: 0.9em;
+      }
+      table.dataTable {
+        width: 100% !important;
+        border-collapse: collapse;
+      }
+      table.dataTable thead th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 12px;
+        text-align: left;
+        font-weight: 600;
+      }
+      table.dataTable tbody tr:hover {
+        background-color: #f5f5f5;
+      }
+      table.dataTable tbody td {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+      }
+      .type-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.85em;
+        text-align: center;
+        min-width: 30px;
+      }
+      .type-P {
+        background-color: #4ade80;
+        color: #000;
+      }
+      .type-V {
+        background-color: #fbbf24;
+        color: #000;
+      }
+      .avg-danger {
+        color: #dc2626;
+        font-weight: bold;
+      }
+      .avg-warning {
+        color: #f59e0b;
+        font-weight: bold;
+      }
+      .avg-info {
+        color: #eab308;
+      }
+      .avg-success {
+        color: #16a34a;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        color: #999;
+        font-size: 0.85em;
+      }
+      .footer a {
+        color: #667eea;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📊 LogAnalyzer Report</h1>
+      <div class="subtitle">
+        Generated on December 12, 2025 at 03:30PM - Demo Version
+      </div>
+
+      <table id="logTable" class="display" style="width: 100%">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>View</th>
+            <th>Count</th>
+            <th>AVG (ms)</th>
+            <th>Max</th>
+            <th>Min</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="type-badge type-V">V</span></td>
+            <td>layouts/application.html.erb</td>
+            <td>1523</td>
+            <td class="avg-danger">850.5</td>
+            <td>1200.3</td>
+            <td>450.2</td>
+          </tr>
+          <tr>
+            <td><span class="type-badge type-P">P</span></td>
+            <td>users/_user_card.html.erb</td>
+            <td>856</td>
+            <td class="avg-warning">520.8</td>
+            <td>890.5</td>
+            <td>320.1</td>
+          </tr>
+          <tr>
+            <td><span class="type-badge type-V">V</span></td>
+            <td>dashboard/index.html.erb</td>
+            <td>2341</td>
+            <td class="avg-info">150.3</td>
+            <td>320.5</td>
+            <td>95.2</td>
+          </tr>
+          <tr>
+            <td><span class="type-badge type-P">P</span></td>
+            <td>shared/_header.html.erb</td>
+            <td>4521</td>
+            <td class="avg-success">45.7</td>
+            <td>120.3</td>
+            <td>15.2</td>
+          </tr>
+          <tr>
+            <td><span class="type-badge type-P">P</span></td>
+            <td>shared/_footer.html.erb</td>
+            <td>4521</td>
+            <td class="avg-success">32.1</td>
+            <td>85.4</td>
+            <td>12.8</td>
+          </tr>
+          <tr>
+            <td><span class="type-badge type-V">V</span></td>
+            <td>products/show.html.erb</td>
+            <td>1234</td>
+            <td class="avg-warning">450.2</td>
+            <td>780.9</td>
+            <td>250.3</td>
+          </tr>
+          <tr>
+            <td><span class="type-badge type-P">P</span></td>
+            <td>products/_product_details.html.erb</td>
+            <td>987</td>
+            <td class="avg-info">180.5</td>
+            <td>420.1</td>
+            <td>95.3</td>
+          </tr>
+          <tr>
+            <td><span class="type-badge type-V">V</span></td>
+            <td>admin/reports/analytics.html.erb</td>
+            <td>456</td>
+            <td class="avg-danger">920.8</td>
+            <td>1450.2</td>
+            <td>680.5</td>
+          </tr>
+          <tr>
+            <td><span class="type-badge type-P">P</span></td>
+            <td>comments/_comment.html.erb</td>
+            <td>3456</td>
+            <td class="avg-success">68.4</td>
+            <td>150.2</td>
+            <td>25.6</td>
+          </tr>
+          <tr>
+            <td><span class="type-badge type-V">V</span></td>
+            <td>users/profile.html.erb</td>
+            <td>789</td>
+            <td class="avg-info">220.5</td>
+            <td>450.8</td>
+            <td>120.3</td>
+          </tr>
+          <tr>
+            <td><span class="type-badge type-P">P</span></td>
+            <td>notifications/_notification_item.html.erb</td>
+            <td>2345</td>
+            <td class="avg-success">42.3</td>
+            <td>95.7</td>
+            <td>18.4</td>
+          </tr>
+          <tr>
+            <td><span class="type-badge type-V">V</span></td>
+            <td>posts/index.html.erb</td>
+            <td>1678</td>
+            <td class="avg-warning">380.2</td>
+            <td>720.5</td>
+            <td>180.9</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="footer">
+        Generated by
+        <a href="https://github.com/igorkasyanchuk/log_analyzer" target="_blank"
+          >LogAnalyzer</a
+        >
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#logTable").DataTable({
+          pageLength: 50,
+          order: [[3, "desc"]], // Sort by AVG time descending by default
+          columnDefs: [{ targets: [2, 3, 4, 5], className: "dt-right" }],
+          language: {
+            search: "Search views:",
+            lengthMenu: "Show _MENU_ entries per page",
+            info: "Showing _START_ to _END_ of _TOTAL_ views",
+            infoEmpty: "No views found",
+            infoFiltered: "(filtered from _MAX_ total views)",
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
